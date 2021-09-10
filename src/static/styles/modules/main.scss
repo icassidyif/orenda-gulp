@@ -85,22 +85,29 @@ body {
 }
 
 
-.v-vlite {
-  --vlite-colorPrimary: #bb6a9f;
-  --vlite-controlsIconWidth: 160px;
-  --vlite-controlsIconHeight: 160px;
-  --vlite-controlsColor: #FFFFFF;
+.plyr {
+  --plyr-color-main: #bb6a9f;
+  --plyr-video-background: rgba(0, 0, 0, 1);
+  --plyr-font-family: $base-font;
+
 }
-.v-bigPlay {
-  @include create-mq(768) {
-    width: 140px;
-    height: 140px;
-  }
-  @include create-mq(992) {
-    width: 200px;
-    height: 200px;
+.plyr__control--overlaid {
+  background-color: transparent;
+  svg {
+    width: 65px;
+    height: 65px;
+    @include create-mq(768) {
+      width: 140px;
+      height: 140px;
+    }
+    @include create-mq(992) {
+      width: 200px;
+      height: 200px;
+    }
   }
 }
+
+
 
 
 
