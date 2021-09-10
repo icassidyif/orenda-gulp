@@ -1,7 +1,16 @@
 @use "sass:math";
+
 body, html {
   font-size: $base-font-size+px;
   line-height: toEm(18);
+
+}
+html {
+  scroll-padding-top: 60px;
+  scroll-behavior: smooth;
+  @include create-mq(768) {
+    scroll-padding-top: 100px;
+  }
 }
 body {
   background-color: #ffffff;

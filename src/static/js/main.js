@@ -4,6 +4,7 @@ import './components/gallery';
 import './components/video';
 
 import './components/select';
+import './components/share-menu';
 import './components/menu';
 import './components/expand';
 import './components/form';

@@ -65,10 +65,6 @@
   &__inline {
     display: flex;
     justify-content: space-between;
-    svg {
-      width: 40px;
-      height: 40px;
-    }
     &_2 {
       align-items: center;
       margin: 0 0 15px 0;
@@ -255,7 +251,85 @@
       object-fit: cover;
     }
   }
+
 }
+
+.share {
+  font-size: toRem(15);
+  position: relative;
+  width: toEm(40);
+  height: toEm(40);
+  @include create-mq(768) {
+    font-size: toRem(25);
+  }
+  &__trigger {
+    cursor: pointer;
+    @include create-mq(992) {
+      &:hover {
+        svg {
+          transform: scale(1.1);
+        }
+      }
+    }
+    svg {
+      height: 100%;
+      transition: all .2s ease-out;
+    }
+  }
+  &.open {
+    .share {
+      &__container {
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
+      }
+    }
+  }
+  &__container {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: all .3s ease-out;
+    background: #BB6A9F;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: toEm(15) toEm(25);
+    border-radius: 25px 0 25px 25px;
+    position: absolute;
+    right: 100%;
+    top: 100%;
+    transform: translateY(toEm(25));
+    z-index: 6;
+    &:before {
+      content: '';
+      width: toEm(25);
+      height: toEm(25);
+      position: absolute;
+      background-image: url("data:image/svg+xml,%3Csvg width='27' height='20' viewBox='0 0 27 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.9501 1.53456L0 19.4847H26.4856V5.07009C26.4856 0.615569 21.0999 -1.61526 17.9501 1.53456Z' fill='%23BB6A9F'/%3E%3C/svg%3E%0A");
+      background-position: bottom right;
+      background-repeat: no-repeat;
+      background-size: auto;
+
+      top: 0;
+      right: 0;
+      transform: translateY( calc(-100% + 1px));
+    }
+  }
+  &__social-link {
+    height: toEm(30);
+    width: auto;
+    margin: 0 0 toEm(40) 0;
+    &:last-child {
+      margin: 0;
+    }
+    svg {
+      height: 100%;
+    }
+  }
+}
+
 
 .rieltor-block {
   position: relative;
