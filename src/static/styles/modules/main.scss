@@ -93,7 +93,15 @@ body {
 }
 .plyr__control--overlaid {
   background-color: transparent;
+  &:hover {
+    background-color: transparent!important;
+    svg {
+      fill: #FFFFFF;
+    }
+  }
   svg {
+    transition: all .2s ease-out;
+    fill: rgba(255, 255, 255, 0.78);
     width: 65px;
     height: 65px;
     @include create-mq(768) {
