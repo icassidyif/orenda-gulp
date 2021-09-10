@@ -1,0 +1,38 @@
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: #A04B82;
+  &-phone {
+
+  }
+  &-close {
+    width: 20px;
+    height: 20px;
+    @include create-mq(768) {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  &-search {
+    width: toEm(13);
+    height: toEm(13);
+    fill: #A7A9AC;
+  }
+  &-expand-arrow {
+    width: 21px;
+    height: 12px;
+    @include create-mq(768) {
+      width: 56px;
+      height: 32px;
+    }
+  }
+  &-slider-prev {
+    width: 16px;
+    height: 28px;
+  }
+  &-slider-next {
+    width: 16px;
+    height: 28px;
+  }
+
+}

@@ -1,0 +1,57 @@
+.footer {
+  grid-area: footer;
+  font-size: toRem(15);
+  color: #FFFFFF;
+  @include create-mq(768) {
+    font-size: toRem(24);
+  }
+  &__body {
+    background-color: #BB6A9F;
+    padding: 15px 0;
+    @include create-mq(768) {
+      padding: 40px 0;
+    }
+  }
+  &__label {
+    display: block;
+    font-size: inherit;
+    line-height: 100%;
+    margin: 0 0 toEm(5) 0;
+    font-weight: 500;
+  }
+  &__phone {
+    line-height: 100%;
+    display: inline-block;
+    color: #FFFFFF;
+    font-size: inherit;
+    margin: 0 0 toEm(15) 0;
+    font-weight: 700;
+    transition: color .2s ease-out;
+    @include create-mq(992) {
+      &:hover {
+        color: #52D8C5;
+      }
+    }
+  }
+  &__social {
+    display: flex;
+  }
+  &__social-link {
+    font-size: inherit;
+    margin: 0 toEm(15) 0 0;
+    &:last-child {
+      margin: 0;
+    }
+    @include create-mq(992) {
+      &:hover {
+        svg {
+          transform: scale(1.1);
+        }
+      }
+    }
+    svg {
+      transition: all .2s ease-out;
+      height: toEm(20);
+    }
+  }
+}

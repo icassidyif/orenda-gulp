@@ -1,0 +1,27 @@
+include ../helpers/mixins
+
+block variables
+
+doctype html
+html(lang="uk-UA")
+  head
+    meta(charset="utf-8")
+    title #{titlePage}
+    meta(http-equiv="X-UA-Compatible", content="IE = edge")
+    meta(name="viewport" content="width=device-width,initial-scale=1")
+    meta(name="keywords" content="")
+    link(rel="stylesheet" type="text/css" href="static/css/styles.css")
+  body
+    .wrapper
+      include ../modules/header
+      main.page.page_small
+        block page
+      include ../modules/footer
+    script(src="static/js/vendors-main.js")
+    script(src="static/js/main.js")
+    block script
+
+
+
+
+

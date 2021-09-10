@@ -1,0 +1,23 @@
+header.header
+  .container
+    .header__body
+      .header__logo
+        a(href='#')
+          +image('common', 'logo.svg', 'logo')
+      .header__phone.hidden-sm-down.phone
+        a(href='tel:+380664567377')
+          +icon('phone')
+          |066 825 40 16
+      nav.header__menu.menu
+        ul
+          li.menu__item
+            a(href='#').active Головна
+          li.menu__item
+            a(href='#') Про нас
+          li.menu__item
+            a(href='#') Контакти
+      .header__burger.hidden-lg-up
+        .burger
+          span
+          span
+          span

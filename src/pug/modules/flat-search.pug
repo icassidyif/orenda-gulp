@@ -1,0 +1,239 @@
+section.flatsearch.page-block
+  form
+    .flatsearch__header.header-flatsearch
+      <svg class="wave wave-top" viewBox="0 0 320 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M133.651 12.2979C40 -1.00879 0 12.2979 0 12.2979V101H320V0C320 0 227.303 25.6035 133.651 12.2979Z" fill="#BB6A9F"/>
+      </svg>
+      .header-flatsearch__content
+        .container
+          .header-flatsearch__image
+            +image('common', 'snail.png')
+          .header-flatsearch__title
+            h2.title.title_2.title-white Пошук квартир
+            .form-control.search
+              input(type='text' placeholder='пошук за кодом')
+              +icon('search')
+          .header-flatsearch__filter
+            h3.header-flatsearch__label.title.title_3.title-white Кімнати
+            .flatsearch__block
+              .form-control.checkbox.checkbox_ring
+                label
+                  input(type='checkbox' name="rooms" value="1")
+                  span 1
+              .form-control.checkbox.checkbox_ring
+                label
+                  input(type='checkbox' name="rooms" value="2")
+                  span 2
+              .form-control.checkbox.checkbox_ring
+                label
+                  input(type='checkbox' name="rooms" value="3")
+                  span 3
+              .form-control.checkbox.checkbox_ring
+                label
+                  input(type='checkbox' name="rooms" value="4+")
+                  span 4+
+              .form-control.checkbox.checkbox_ring-2
+                label
+                  input(type='checkbox' name="rooms" value="studio")
+                  span Студія
+              .form-control.checkbox.checkbox_ring-2
+                label
+                  input(type='checkbox' name="rooms" value="house")
+                  span Будинок
+
+
+
+            .flatsearch__block
+              .form-control.select
+                .select__trigger
+                  span Район
+                  .arrow
+                .custom-options
+                  .form-control.checkbox
+                    label
+                      input(type='checkbox' name="district" value="bam")
+                      span Бам
+                  .form-control.checkbox
+                    label
+                      input(type='checkbox' name="district" value="centr")
+                      span Центр
+                  .form-control.checkbox
+                    label
+                      input(type='checkbox' name="district" value="kryhivci")
+                      span Крихівці
+                  .form-control.checkbox
+                    label
+                      input(type='checkbox' name="district" value="pozitron")
+                      span Позитрон
+                  .form-control.checkbox
+                    label
+                      input(type='checkbox' name="district" value="nez-tys")
+                      span Незалежності-Тисминецька
+                  .form-control.checkbox
+                    label
+                      input(type='checkbox' name="district" value="centr")
+                      span Центр
+                  .form-control.checkbox
+                    label
+                      input(type='checkbox' name="district" value="kryhivci")
+                      span Крихівці
+                  .form-control.checkbox
+                    label
+                      input(type='checkbox' name="district" value="pozitron")
+                      span Позитрон
+                  .form-control.checkbox
+                    label
+                      input(type='checkbox' name="district" value="bam")
+                      span Бам
+                  .form-control.checkbox
+                    label
+                      input(type='checkbox' name="district" value="centr")
+                      span Центр
+                  .form-control.checkbox
+                    label
+                      input(type='checkbox' name="district" value="kryhivci")
+                      span Крихівці
+                  .form-control.checkbox
+                    label
+                      input(type='checkbox' name="district" value="pozitron")
+                      span Позитрон
+                  .form-control.checkbox
+                    label
+                      input(type='checkbox' name="district" value="bam")
+                      span Бам
+                  .form-control.checkbox
+                    label
+                      input(type='checkbox' name="district" value="centr")
+                      span Центр
+                  .form-control.checkbox
+                    label
+                      input(type='checkbox' name="district" value="kryhivci")
+                      span Крихівці
+                  .form-control.checkbox
+                    label
+                      input(type='checkbox' name="district" value="pozitron")
+                      span Позитрон
+
+            h3.header-flatsearch__label.title.title_3.title-white Ціна
+            .flatsearch__block
+              .form-control.input
+                input(type='number' placeholder='Від:')
+              .form-control.input
+                input(type='number' placeholder='До:')
+
+              .form-control.checkbox.checkbox_ring-2
+                label
+                  input(type='radio' name="currency" value="grn")
+                  span ₴
+              .form-control.checkbox.checkbox_ring-2
+                label
+                  input(type='radio' name="currency" value="dollar")
+                  span $
+              .form-control.checkbox.checkbox_ring-2
+                label
+                  input(type='radio' name="currency" value="euro")
+                  span €
+      <svg class="wave wave-bottom" viewBox="0 0 320 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M186.349 70.2595C280 80.7989 320 70.2595 320 70.2595V0H3.05176e-05V80C3.05176e-05 80 92.6975 59.7201 186.349 70.2595Z" fill="#BB6A9F"/>
+      </svg>
+
+    .flatsearch__body.body-flatsearch.body-expand
+      .body-flatsearch__overlay
+        .body-flatsearch__icon.expand-icon
+          +icon('expand-arrow')
+        .body-flatsearch__button
+          button.button.button_2.button_no-shadow
+            span Пошук
+      .container
+        .flatsearch__block.flatsearch__block_between.body-flatsearch__block
+          .form-control.checkbox
+            label
+              input(type='checkbox' name="main-options" value="individual-heating")
+              span Інд. опалення
+          .form-control.checkbox
+            label
+              input(type='checkbox' name="main-options" value="new-building")
+              span Новобудова
+        .flatsearch__block.body-flatsearch__block
+          .body-flatsearch__wrapper
+            h3.body-flatsearch__title.title.title_4.title-black Поверх:
+            .form-control.input.input_2
+              input(type='number' placeholder='Від')
+            .form-control.input.input_2
+              input(type='number' placeholder='До')
+
+            h3.body-flatsearch__title.title.title_4.title-black Площа:
+            .form-control.input.input_2
+              input(type='number' placeholder='Від')
+            .form-control.input.input_2
+              input(type='number' placeholder='До')
+
+
+        h3.body-flatsearch__title.title.title_4.title-black Кількість спальних місць:
+        .flatsearch__block.body-flatsearch__block
+          .form-control.checkbox.checkbox_square
+            label
+              input(type='checkbox' name="sleep-place" value="1")
+              span 1
+          .form-control.checkbox.checkbox_square
+            label
+              input(type='checkbox' name="sleep-place" value="2")
+              span 2
+          .form-control.checkbox.checkbox_square
+            label
+              input(type='checkbox' name="sleep-place" value="3")
+              span 3
+          .form-control.checkbox.checkbox_square
+            label
+              input(type='checkbox' name="sleep-place" value="4")
+              span 4
+          .form-control.checkbox.checkbox_square
+            label
+              input(type='checkbox' name="sleep-place" value="5+")
+              span 5+
+          .body-flatsearch__line
+        .body-flatsearch__wrapper.body-flatsearch__wrapper_2
+          .form-control.checkbox
+            label
+              input(type='checkbox' name="options" value="parking")
+              span Паркінг
+          .form-control.checkbox
+            label
+              input(type='checkbox' name="options" value="garas")
+              span Гараж
+          .form-control.checkbox
+            label
+              input(type='checkbox' name="options" value="kladovka")
+              span Кладовка
+          .form-control.checkbox
+            label
+              input(type='checkbox' name="options" value="vidk-balkon")
+              span Відкритий балкон
+          .form-control.checkbox
+            label
+              input(type='checkbox' name="options" value="pidigriv-pidlogy")
+              span Підігрів підлоги
+          .form-control.checkbox
+            label
+              input(type='checkbox' name="options" value="lift")
+              span Ліфт
+          .form-control.checkbox
+            label
+              input(type='checkbox' name="options" value="pralna-mashyna")
+              span Пральна машина
+          .form-control.checkbox
+            label
+              input(type='checkbox' name="options" value="duhovka")
+              span Духовка
+          .form-control.checkbox
+            label
+              input(type='checkbox' name="options" value="vanna")
+              span Ванна
+          .form-control.checkbox
+            label
+              input(type='checkbox' name="options" value="dvospalne-lizko")
+              span Двоспальне ліжко
+
+
+
+

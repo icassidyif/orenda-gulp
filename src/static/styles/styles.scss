@@ -1,0 +1,26 @@
+@import "helpers/libs";
+@import "helpers/reset";
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/fonts";
+@import "helpers/icons";
+
+
+// MODULES
+@import "modules/main";
+@import "modules/common";
+@import "modules/modal";
+@import "modules/ui";
+@import "modules/slider";
+@import "modules/header";
+@import "modules/main-screen";
+@import "modules/top-section";
+@import "modules/flat-search";
+@import "modules/card";
+@import "modules/single-card";
+@import "modules/cards-content";
+@import "modules/pagination";
+@import "modules/slider-block";
+
+@import "modules/footer";
+

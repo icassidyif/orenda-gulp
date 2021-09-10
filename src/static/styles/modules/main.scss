@@ -1,0 +1,107 @@
+@use "sass:math";
+body, html {
+  font-size: $base-font-size+px;
+  line-height: toEm(18);
+}
+body {
+  background-color: #ffffff;
+  font-family: $base-font;
+  font-weight: 400;
+  position: relative;
+  &.lock {
+    overflow: hidden;
+  }
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: fit-content(50px) auto fit-content(50px);
+  grid-template-areas:
+    'header'
+    'page'
+    'footer';
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+.page {
+  position: relative;
+  grid-area: page;
+  padding: 90px 0 0 0;
+  @include create-mq(768) {
+    padding: 160px 0 0 0;
+  }
+  @include create-mq(992) {
+    padding: 180px 0 0 0;
+  }
+  &_small {
+    padding: 60px 0 0 0;
+    @include create-mq(768) {
+      padding: 100px 0 0 0;
+    }
+    @include create-mq(992) {
+      padding: 100px 0 0 0;
+    }
+  }
+}
+.container {
+  position: relative;
+  width: 100%;
+  max-width: $container * 1px;
+  margin: 0 auto;
+  @each $modifier , $breakpoint in $map-grid-props {
+    @include create-mq($breakpoint, 'min') {
+      @each $mod, $gut in $map-breakpoints-gutter {
+        @if($mod == $modifier) {
+          padding: 0 math.div($gut, 2) * 1px;
+        }
+      }
+    }
+  }
+  &--fluid {
+    margin: 0;
+    max-width: 100%;
+  }
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    @each $modifier , $breakpoint in $map-grid-props {
+      @include create-mq($breakpoint, 'min') {
+        @each $mod, $gut in $map-breakpoints-gutter {
+          @if($mod == $modifier) {
+            margin: 0 math.div($gut, 2) * -1px;
+          }
+        }
+      }
+    }
+  }
+  @each $modifier , $breakpoint in $map-grid-props {
+    @include create-col-classes($modifier, $grid__cols, $breakpoint);
+  }
+}
+
+
+.logo {
+  width: 100%;
+}
+
+
+.v-vlite {
+  --vlite-colorPrimary: #bb6a9f;
+  --vlite-controlsIconWidth: 160px;
+  --vlite-controlsIconHeight: 160px;
+  --vlite-controlsColor: #FFFFFF;
+}
+.v-bigPlay {
+  @include create-mq(768) {
+    width: 140px;
+    height: 140px;
+  }
+  @include create-mq(992) {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+
+
+

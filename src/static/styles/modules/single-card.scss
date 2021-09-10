@@ -1,0 +1,334 @@
+.card-single {
+  margin: 15px 0 0 0;
+  @include create-mq(768) {
+    margin: 30px 0 0 0;
+  }
+  @include create-mq(992) {
+    margin: 30px 0 0 0;
+  }
+
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__index {
+    font-size: toRem(15);
+    font-weight: 700;
+    color: #FFFFFF;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    padding: toEm(5) toEm(10);
+    background: linear-gradient(95.42deg, #C6FFB2 -58.8%, #52D8C5 116.59%);
+    border-radius: toEm(15);
+    transform: translateY(-50%);
+    @include create-mq(768) {
+      font-size: toRem(20);
+    }
+  }
+
+  &__slider {
+    display: grid;
+    margin: 0 0 15px 0;
+    @include create-mq(768) {
+      margin: 0 0 30px 0;
+    }
+    .swiper {
+      padding: 0;
+      .swiper-pagination {
+        bottom: 10px;
+        @include create-mq(768) {
+          bottom: 30px!important;
+        }
+        @include create-mq(992) {
+          bottom: 40px!important;
+        }
+      }
+    }
+  }
+
+  &__photo {
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 */
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__inline {
+    display: flex;
+    justify-content: space-between;
+    svg {
+      width: 40px;
+      height: 40px;
+    }
+    &_2 {
+      align-items: center;
+      margin: 0 0 15px 0;
+      @include create-mq(768) {
+        margin: 0 0 30px 0;
+      }
+      @include create-mq(992) {
+        margin: 0 0 50px 0;
+      }
+    }
+    &_3 {
+      justify-content: center;
+    }
+  }
+
+  &__title {
+    margin: 0 15px toEm(10, 27) 0;
+    &-2 {
+      margin: 0 0 toEm(10, 25) 0;
+    }
+  }
+
+  &__status {
+    @include create-mq(768) {
+      font-size: toRem(25);
+    }
+  }
+  &__options-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 0 15px 0;
+    margin: 0 0 15px 0;
+    border-bottom: 1px solid #A04B82;
+    @include create-mq(768) {
+      padding: 0 0 30px 0;
+      margin: 0 0 30px 0;
+    }
+    @include create-mq(992) {
+      padding: 0 0 50px 0;
+      margin: 0 0 50px 0;
+    }
+  }
+  &__options {
+    display: grid;
+    grid-template-columns: min-content max-content;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+  &__label {
+    font-weight: 700;
+  }
+
+  &__tags {
+    font-size: toRem(12);
+    font-weight: 700;
+    color: #574C4C;
+    margin: 0 0 calc(15px - #{toEm(8, 12)}) 0;
+    display: flex;
+    flex-wrap: wrap;
+    @include create-mq(768) {
+      font-size: toRem(20);
+      margin: 0 0 calc(50px - #{toEm(8,20)}) 0;
+    }
+    @include create-mq(992) {
+      margin: 0 0 calc(70px - #{toEm(8,20)}) 0;
+    }
+  }
+  &__tag {
+    font-size: inherit;
+    border: 1px solid #BB6A9F;
+    padding: toEm(5, 12) toEm(10, 12);
+    border-radius: toEm(15, 12);
+    margin: 0 toEm(8, 12) toEm(8, 12) 0;
+  }
+  &__icon {
+    display: flex;
+    justify-content: center;
+    @include create-mq(992) {
+      display: none;
+      visibility: hidden;
+    }
+    svg {
+      transition: all .2s ease-out;
+      @include create-mq(768) {
+        width: 40px;
+        height: 23px;
+      }
+    }
+  }
+
+  &__description {
+    font-size: toRem(15);
+    background-color: #EDEDED;
+    padding: toEm(10) toEm(10) toEm(15) toEm(10);
+    line-height: 120%;
+    border-radius: 10px;
+    margin: 0 0 toEm(30) 0;
+    @include create-mq(768) {
+      margin: 0 0 toEm(50) 0;
+    }
+    p {
+      margin: 0 0 toEm(20) 0;
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+  &__description-wrapper {
+    margin: 0 0 toEm(20) 0;
+    overflow-y: hidden;
+    height: 145px;
+    @include create-mq(992) {
+      height: auto!important;
+    }
+    &.open {
+      ~ .card-single__icon svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &__contact {
+    display: inline-block;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: toRem(15);
+    background: linear-gradient(96.15deg, #C6FFB2 -57.14%, #52D8C5 75.09%);
+    padding: toEm(8) toEm(20);
+    border-radius: toEm(18);
+    transition: background .2s ease-out;
+    margin: 0 0 30px 0;
+
+    @include create-mq(768) {
+      font-size: toRem(25);
+      margin: 0 0 100px 0;
+    }
+    @include create-mq(992) {
+      font-size: toRem(35);
+      &:hover {
+        background: #BB6A9F;
+      }
+    }
+  }
+  &__video {
+    background-color: #BB6A9F;
+    margin: 0 0 30px 0;
+    padding: 20px 0 30px 0;
+    @include create-mq(768) {
+      margin: 0 0 80px 0;
+    }
+    @include create-mq(992) {
+      margin: 0 0 100px 0;
+    }
+  }
+  &__video-container {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  &__order-button {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 60px 0;
+  }
+  &__map {
+    border-radius: 10px;
+    overflow: hidden;
+    filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.25));
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 */
+    margin: 0 0 50px 0;
+    @include create-mq(768) {
+      margin: 0 0 100px 0;
+    }
+    @include create-mq(992) {
+      margin: 0 0 150px 0;
+    }
+    iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.rieltor-block {
+  position: relative;
+  margin: 0 0 15px 0;
+  @include create-mq(768) {
+    margin: 0 0 60px 0;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    background-color: #BB6A9F;
+    height: 100%;
+    width: 50%;
+    left: 0;
+    top: 0;
+  }
+  &__wrapper {
+    background-color: #FFFFFF;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-column-gap: 20px;
+    @include create-mq(768) {
+      grid-column-gap: 30px;
+    }
+    @include create-mq(992) {
+      grid-column-gap: 100px;
+    }
+  }
+  &__contacts {
+    background-color: #BB6A9F;
+    padding: toEm(10) toEm(10) toEm(20) toEm(0);
+    border-radius: 0 10px 10px 0;
+    @include create-mq(768) {
+      padding: toEm(20) toEm(30) toEm(30) toEm(0);
+    }
+  }
+  &__block {
+    margin: 0 0 15px 0;
+  }
+  &__name {
+    font-size: toRem(15);
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0 0 toEm(8) 0;
+    @include create-mq(768) {
+      font-size: toRem(24);
+    }
+  }
+  &__phone {
+    font-size: toRem(15);
+    font-weight: 700;
+    color: #A04B82;
+    background-color: #FFFFFF;
+    display: block;
+    padding: toEm(5) toEm(10);
+    border-radius: toEm(15);
+    margin: 0 0 toEm(12);
+    @include create-mq(768) {
+      font-size: toRem(20);
+    }
+  }
+  &__actions {
+    display: flex;
+    flex-direction: column;
+  }
+  &__button {
+    margin: 0 0 15px 0;
+    @include create-mq(768) {
+      font-size: toRem(20);
+      margin: 0 0 30px 0;
+    }
+    &:last-child {
+      margin: 0;
+    }
+  }
+}

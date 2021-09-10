@@ -1,0 +1,89 @@
+.card {
+  font-size: toRem(15);
+  background: #FFFFFF;
+  border-radius: 10px;
+  overflow: hidden;
+  filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.25));
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  &__images {
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 */
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+  span {
+    font-weight: 300;
+    line-height: 100%;
+  }
+  &__content {
+    height: 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    @include create-mq(768) {
+      padding: 15px 15px 30px 15px;
+    }
+  }
+  &__title {
+    margin: 0 0 25px 0;
+    flex-grow: 1;
+  }
+  &__table {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 7px;
+    align-items: baseline;
+    margin: 0 0 25px 0;
+    @include create-mq(768) {
+      grid-row-gap: 15px;
+    }
+  }
+  &__label {
+    font-weight: 500!important;
+    @include create-mq(768) {
+      font-size: toRem(20);
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__price {
+    color: #A04B82;
+    font-size: toRem(25);
+    font-weight: 700!important;
+  }
+  &__status {
+    font-size: toRem(25);
+    font-weight: 700!important;
+    &_free {
+      background: -webkit-linear-gradient(278.54deg, #52D8C5 11.1%, #C6FFB2 160.58%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    &_rent {
+      background: -webkit-linear-gradient(282.38deg, #FF6B6B -12.42%, #C6FFB2 225.43%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    &_booked {
+      background: -webkit-linear-gradient(275.4deg, #7A8EF9 38.76%, #C6FFB2 175.88%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    &_released {
+      background: -webkit-linear-gradient(273.5deg, #FFBD6F 22.56%, #D6FFC8 209.27%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}

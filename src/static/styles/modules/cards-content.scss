@@ -1,0 +1,17 @@
+.cards-content {
+  &__wrapper {
+    display: grid;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    grid-template-columns: 1fr;
+    margin: 0 0 20px 0;
+    @include create-mq(768) {
+      grid-template-columns: 1fr 1fr;
+      margin: 0 0 55px 0;
+    }
+    @include create-mq(992) {
+      grid-template-columns: 1fr 1fr 1fr;
+      margin: 0 0 100px 0;
+    }
+  }
+}

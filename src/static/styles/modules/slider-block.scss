@@ -1,0 +1,26 @@
+.slider-block {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  &__title {
+    max-width: toEm(155,25);
+    padding: 0 0 toEm(15,25) 0;
+  }
+  &__icon {
+    height: 96px;
+    @include create-mq(768) {
+      height: 245px;
+    }
+    img {
+      height: 100%;
+    }
+  }
+  &__body {
+    background-color: #BB6A9F;
+  }
+  &__slider {
+    display: grid;
+  }
+}
