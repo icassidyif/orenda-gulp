@@ -47,7 +47,6 @@ const singlePageSlider = new Swiper('.slider-card-single .swiper',
     },
   });
 
-
 const teamSlider = new Swiper('.team__slider .swiper',
   {
     spaceBetween: 30,
