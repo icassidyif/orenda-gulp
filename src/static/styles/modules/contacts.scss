@@ -1,0 +1,127 @@
+.contacts {
+  &__header {
+    display: grid;
+    margin: 0 0 30px 0;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'title image'
+      'phone image';
+  }
+  &__block {
+    position: relative;
+    padding: 50px 0;
+    margin: 0 0 30px 0;
+  }
+  &__wave {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  &__social {
+    display: flex;
+    svg {
+      height: 100%;
+    }
+  }
+
+  &__adress {
+    font-size: inherit;
+    font-weight: 500;
+    color: #A04B82;
+    max-width: toEm(200);
+    margin: 0 0 toEm(17);
+    line-height: 110%;
+    @include create-mq(768) {
+      font-size: toRem(24);
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__link {
+    display: block;
+    font-size: toRem(15);
+    height: toEm(35);
+    margin: 0 toEm(20) 0 0;
+    transition: all .2s ease-out;
+    @include create-mq(768) {
+      font-size: toRem(25);
+    }
+    @include create-mq(992) {
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+
+  &__title {
+    grid-area: title;
+    margin: 0 0 40px 0;
+  }
+  &__title-2 {
+    margin: 0 0 25px 0;
+    @include create-mq(768) {
+      margin: 0 0 45px 0;
+    }
+  }
+  &__image {
+    grid-area: image;
+    justify-self: end;
+    align-self: end;
+    width: 100%;
+    max-width: 150px;
+    @include create-mq(768) {
+      max-width: 185px;
+    }
+    @include create-mq(992) {
+      max-width: 310px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  &__phone {
+    grid-area: phone;
+    display: flex;
+    flex-direction: column;
+    color: #A04B82;
+    font-weight: 500;
+    font-size: toRem(15);
+    @include create-mq(768) {
+      font-size: toRem(24);
+    }
+    span {
+      display: block;
+      font-size: inherit;
+      margin: 0 0 toEm(7) 0;
+    }
+    a {
+      display: block;
+      font-size: toRem(20);
+      text-decoration: none;
+      color: inherit;
+      font-weight: 700;
+      white-space: nowrap;
+      transition: all .2s ease-out;
+      line-height: 100%;
+      @include create-mq(768) {
+        font-size: toRem(40);
+      }
+      @include create-mq(992) {
+        &:hover {
+          color: #52D8C5;
+        }
+      }
+    }
+  }
+}
