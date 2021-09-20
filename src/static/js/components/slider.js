@@ -48,6 +48,27 @@ const singlePageSlider = new Swiper('.slider-card-single .swiper',
   });
 
 
+const teamSlider = new Swiper('.team__slider .swiper',
+  {
+    spaceBetween: 30,
+    loop: false,
+    slidesPerView: 1,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      dynamicBullets: true,
+      dynamicMainBullets: 4,
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+    },
+    autoplay: {
+      delay: 5000,
+    },
+  });
+
+
 
 
 

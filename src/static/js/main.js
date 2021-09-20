@@ -8,3 +8,4 @@ import './components/share-menu';
 import './components/menu';
 import './components/expand';
 import './components/form';
+import './components/scroll';

@@ -3,7 +3,7 @@ section.single-card.card-single.page-block
 
   .container
     .card-single__wrapper
-      .card-single__slider.slider-card-single
+      div(data-aos="zoom-in-left").card-single__slider.slider-card-single
         .swiper
           .swiper-wrapper.card-single__galler
             .swiper-slide
@@ -26,7 +26,7 @@ section.single-card.card-single.page-block
       span.card-single__index 29909763
 
 
-    .card-single__inline
+    div(data-aos="zoom-in-right").card-single__inline
       h1.card-single__title.title.title-black 3 к. квартира з меблями
       .card-single__share.share
         .share__trigger
@@ -106,10 +106,10 @@ section.single-card.card-single.page-block
             </svg>
 
 
-    .card-single__inline.card-single__inline_2
+    div(data-aos="zoom-in-right").card-single__inline.card-single__inline_2
       span.card-single__price.title.title_2 300$
       span.card-single__status.card__status.card__status_free Вільна
-    .card-single__options-wrapper
+    div(data-aos="zoom-in-left").card-single__options-wrapper
       .card-single__options
         span.card-single__label Кімнат:
         span 3
@@ -125,7 +125,7 @@ section.single-card.card-single.page-block
         span Відеоогляд
         +icon('video-button')
 
-    .card-single__tags
+    div(data-aos="zoom-in-right").card-single__tags
       span.card-single__tag кондиціонер
       span.card-single__tag вана
       span.card-single__tag інд.опалення
@@ -141,9 +141,9 @@ section.single-card.card-single.page-block
       span.card-single__tag тераса
       span.card-single__tag духовка
 
-    h2.card-single__title-2.title.title_2 Для рієлтора:
+    h2(data-aos="zoom-in-left").card-single__title-2.title.title_2 Для рієлтора:
 
-  .card-single__rieltor.rieltor-block
+  div(data-aos="zoom-in-left").card-single__rieltor.rieltor-block
     .container
       .rieltor-block__wrapper
         .rieltor-block__contacts
@@ -164,7 +164,7 @@ section.single-card.card-single.page-block
             span Забронювати
           button.rieltor-block__button.button.button_2.button_blue
             span Угода
-  .container
+  div(data-aos="zoom-in-right").container
     h2.card-single__title-2.title.title_2 Опис:
     .card-single__description
       .card-single__description-wrapper.body-expand
@@ -176,18 +176,18 @@ section.single-card.card-single.page-block
 
     a(href='tel:+380665465429').card-single__contact +38 095 222 45 22
 
-  .card-single__video#video
+  div(data-aos="zoom-in-left").card-single__video#video
     .container
       h2.title.title_2.title-white.card-single__title-2 Відеоогляд:
       .card-single__video-container
         .video-player(data-plyr-provider="youtube" data-plyr-embed-id="XnSTfwI9cPo")
 
-  .card-single__order-button
+  div(data-aos="zoom-in-right").card-single__order-button
     button(data-modal='#order-show').button.button_1.modal-open
       span Замовити показ
 
 
   .container
-    .card-single__map
+    div(data-aos="zoom-in-left").card-single__map
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49799.385807218314!2d-96.72694116488412!3d40.82102412778144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8796bee395e0c12b%3A0x6820d293c041239!2z0JHQuNCx0LvQuNC-0YLQtdC60LAg0JTQvtC9INCb0LDQsiDQnNC10LzQvtGA0LjQsNC7!5e0!3m2!1sru!2sua!4v1631209482507!5m2!1sru!2sua" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 

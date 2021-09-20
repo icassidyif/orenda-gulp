@@ -55,7 +55,7 @@ const webpackConfig = {
     minimize: false,
     splitChunks: {
       chunks: "all",
-      automaticNameDelimiter: '-'
+      automaticNameDelimiter: '-',
     }
   },
 }

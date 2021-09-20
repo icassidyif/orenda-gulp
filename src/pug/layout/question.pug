@@ -1,0 +1,15 @@
+block variables
+
+if type==="wave"
+  section.question.question_wave(data-aos="zoom-in-right")
+    .question__block
+      +image('common', "wave-bg-about.svg", 'question__wave')
+      .container
+        h2.question__title.title.title_2 #{question}
+        p.question__text #{answer}
+else
+  section.question(data-aos="zoom-in-left")
+    .question__block
+      .container
+        h2.question__title.title.title_2 #{question}
+        p.question__text #{answer}

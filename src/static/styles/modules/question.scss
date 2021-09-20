@@ -1,0 +1,45 @@
+.question {
+  &__block {
+    position: relative;
+  }
+  &__wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &__title {
+    margin: 0 0 toEm(10,25) 0;
+  }
+  &__text {
+    font-size: toRem(15);
+    line-height: 120%;
+    @include create-mq(768) {
+      font-size: toRem(20);
+    }
+    @include create-mq(992) {
+      font-size: toRem(25);
+    }
+  }
+
+  &_wave {
+    .question {
+      &__text {
+        color: #FFFFFF;
+      }
+      &__title {
+        color: #FFFFFF;
+      }
+      &__block {
+        padding: 40px 0;
+        @include create-mq(768) {
+          padding: 110px 0;
+        }
+        @include create-mq(992) {
+          padding: 160px 0;
+        }
+      }
+    }
+  }
+}

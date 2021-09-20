@@ -1,0 +1,34 @@
+section.team
+  .team__block
+    +image('common', "wave-bg-team.svg", 'team__wave')
+    .container
+      h2(data-aos="zoom-in-right").title.title_2.title-white Команда:
+      div(data-aos="zoom-in-left").team__slider
+        .swiper
+          .swiper-wrapper
+            .swiper-slide
+              .team-card
+                .team-card__body
+                  .team-card__avatar
+                    +image('content/team', '01.jpeg')
+                  .team-card__content
+                    h4.team-card__name.title.title_4 Олександр Лахтіонов
+                    p.team-card__description Засновник компанії. Створити компанію такого масштабу могла тільки людина далекоглядна і досвідчена.
+            .swiper-slide
+              .team-card
+                .team-card__body
+                  .team-card__avatar
+                    +image('content/team', '02.jpg')
+                  .team-card__content
+                    h4.team-card__name.title.title_4 Олександр Макаров
+                    p.team-card__description Різноробочий. Людина не дуже далекоглядна але надійна як совєцка етажерка.
+            .swiper-slide
+              .team-card
+                .team-card__body
+                  .team-card__avatar
+                    +image('content/team', '01.jpeg')
+                  .team-card__content
+                    h4.team-card__name.title.title_4 Олександр Лахтіонов
+                    p.team-card__description Засновник компанії. Створити компанію такого масштабу могла тільки людина далекоглядна і досвідчена.
+
+          .swiper-pagination
