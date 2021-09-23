@@ -47,7 +47,7 @@
   &__link {
     display: block;
     font-size: toRem(15);
-    height: toEm(35);
+    height: toEm(30);
     margin: 0 toEm(20) 0 0;
     transition: all .2s ease-out;
     @include create-mq(768) {

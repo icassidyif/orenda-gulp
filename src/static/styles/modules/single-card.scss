@@ -345,6 +345,9 @@
     width: 50%;
     left: 0;
     top: 0;
+    @include create-mq(992) {
+      display: none;
+    }
   }
   &__wrapper {
     background-color: #FFFFFF;
@@ -364,6 +367,9 @@
     border-radius: 0 10px 10px 0;
     @include create-mq(768) {
       padding: toEm(20) toEm(30) toEm(30) toEm(0);
+    }
+    @include create-mq(992) {
+      padding: toEm(20) toEm(30) toEm(30) toEm(20);
     }
   }
   &__block {
