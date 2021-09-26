@@ -7,7 +7,7 @@ let sort = document.querySelector('select#sort');
 const pages  = document.querySelectorAll('.pagination a');
 
 
-const searchResultsPage = 'http://localhost:4000/results.html';
+const searchResultsPage = '/results.html';
 
 const urlEntries =  Array.from(urlParams.entries());
 
