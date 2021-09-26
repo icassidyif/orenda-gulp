@@ -219,13 +219,13 @@
         <div class="modal modal_filter">
           <div class="modal__content">
             <div class="flatsearch">
-              <form>
+              <form class="filter">
                 <div class="flatsearch__header header-flatsearch">
                   <div class="header-flatsearch__content">
                     <div class="container">
                       <div class="header-flatsearch__title">
                         <h2 class="title title_2 title-white">Пошук квартир</h2>
-                        <div class="form-control search"><input type="text" placeholder="пошук за кодом"><svg class="icon icon-search ">
+                        <div class="form-control search"><input type="text" name="code" placeholder="пошук за кодом"><svg class="icon icon-search ">
                             <use xlink:href="static/images/sprite/symbol/sprite.svg#search"></use>
                           </svg></div>
                       </div>
@@ -273,9 +273,9 @@
                         </div>
                         <h3 class="header-flatsearch__label title title_3 title-white">Ціна</h3>
                         <div class="flatsearch__block">
-                          <div class="form-control input"><input type="number" placeholder="Від:"></div>
-                          <div class="form-control input"><input type="number" placeholder="До:"></div>
-                          <div class="form-control checkbox checkbox_ring-2"><label><input type="radio" name="currency" value="grn"><span>₴</span></label></div>
+                          <div class="form-control input"><input type="number" name="price" min="0" placeholder="Від:"></div>
+                          <div class="form-control input"><input type="number" name="price" min="0" placeholder="До:"></div>
+                          <div class="form-control checkbox checkbox_ring-2"><label><input type="radio" name="currency" value="grn" checked><span>₴</span></label></div>
                           <div class="form-control checkbox checkbox_ring-2"><label><input type="radio" name="currency" value="dollar"><span>$</span></label></div>
                           <div class="form-control checkbox checkbox_ring-2"><label><input type="radio" name="currency" value="euro"><span>€</span></label></div>
                         </div>
@@ -300,11 +300,11 @@
                     <div class="flatsearch__block body-flatsearch__block">
                       <div class="body-flatsearch__wrapper">
                         <h3 class="body-flatsearch__title title title_4 title-black">Поверх:</h3>
-                        <div class="form-control input input_2"><input type="number" placeholder="Від"></div>
-                        <div class="form-control input input_2"><input type="number" placeholder="До"></div>
+                        <div class="form-control input input_2"><input type="number" name="floor" min="0" placeholder="Від"></div>
+                        <div class="form-control input input_2"><input type="number" name="floor" min="0" placeholder="До"></div>
                         <h3 class="body-flatsearch__title title title_4 title-black">Площа:</h3>
-                        <div class="form-control input input_2"><input type="number" placeholder="Від"></div>
-                        <div class="form-control input input_2"><input type="number" placeholder="До"></div>
+                        <div class="form-control input input_2"><input type="number" name="square" min="0" placeholder="Від"></div>
+                        <div class="form-control input input_2"><input type="number" name="square" min="0" placeholder="До"></div>
                       </div>
                     </div>
                     <h3 class="body-flatsearch__title title title_4 title-black">Кількість спальних місць:</h3>

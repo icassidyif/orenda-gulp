@@ -10,11 +10,11 @@ section.top-section
           span Фільтр
         .top-section__sort
           .form-control.custom-select
-            select
-              option(value='' selected) За популярністю
-              option(value='Option 1') За новизною
-              option(value='Option 2') Від дешевих до дорогих
-              option(value='Option 3') Від дорогих до дешевих
+            select(name='sort' )#sort
+              option(value='popular') За популярністю
+              option(value='newest') За новизною
+              option(value='cheaper') Від дешевих до дорогих
+              option(value='worst') Від дорогих до дешевих
             .custom-select__icon
               <svg viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7.58273 8.64478C7.31093 8.64478 7.03917 8.54101 6.83195 8.33389L0.311108 1.81298C-0.103703 1.39817 -0.103703 0.725625 0.311108 0.310982C0.725751 -0.103661 1.39816 -0.103661 1.813 0.310982L7.58273 6.08104L13.3525 0.311184C13.7673 -0.103459 14.4396 -0.103459 14.8542 0.311184C15.2693 0.725826 15.2693 1.39837 14.8542 1.81318L8.33351 8.33409C8.12619 8.54124 7.85442 8.64478 7.58273 8.64478Z" fill="#BB6A9F"/>

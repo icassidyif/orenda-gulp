@@ -38,14 +38,14 @@
   .modal.modal_filter
     .modal__content
       .flatsearch
-        form
+        form.filter
           .flatsearch__header.header-flatsearch
             .header-flatsearch__content
               .container
                 .header-flatsearch__title
                   h2.title.title_2.title-white Пошук квартир
                   .form-control.search
-                    input(type='text' placeholder='пошук за кодом')
+                    input(type='text' name='code' placeholder='пошук за кодом')
                     +icon('search')
                 .header-flatsearch__filter
                   h3.header-flatsearch__label.title.title_3.title-white Кімнати
@@ -159,13 +159,13 @@
                   h3.header-flatsearch__label.title.title_3.title-white Ціна
                   .flatsearch__block
                     .form-control.input
-                      input(type='number' placeholder='Від:')
+                      input(type='number' name='price' min="0" placeholder='Від:')
                     .form-control.input
-                      input(type='number' placeholder='До:')
+                      input(type='number' name='price' min="0" placeholder='До:')
 
                     .form-control.checkbox.checkbox_ring-2
                       label
-                        input(type='radio' name="currency" value="grn")
+                        input(type='radio' name="currency" value="grn" checked)
                         span ₴
                     .form-control.checkbox.checkbox_ring-2
                       label
@@ -201,15 +201,15 @@
                 .body-flatsearch__wrapper
                   h3.body-flatsearch__title.title.title_4.title-black Поверх:
                   .form-control.input.input_2
-                    input(type='number' placeholder='Від')
+                    input(type='number' name='floor' min="0" placeholder='Від')
                   .form-control.input.input_2
-                    input(type='number' placeholder='До')
+                    input(type='number' name='floor' min="0" placeholder='До')
 
                   h3.body-flatsearch__title.title.title_4.title-black Площа:
                   .form-control.input.input_2
-                    input(type='number' placeholder='Від')
+                    input(type='number' name='square' min="0" placeholder='Від')
                   .form-control.input.input_2
-                    input(type='number' placeholder='До')
+                    input(type='number' name='square' min="0" placeholder='До')
 
 
               h3.body-flatsearch__title.title.title_4.title-black Кількість спальних місць:

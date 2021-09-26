@@ -249,6 +249,16 @@
   @include create-mq(992) {
     font-size: toRem(25);
   }
+  &.has-danger {
+    input[type='text'], input[type='number'], textarea {
+      //&::placeholder {
+      //  color: #A04B82;
+      //}
+    }
+    //.text-error {
+    //  color: white;
+    //}
+  }
   input[type='text'], input[type='number'], textarea {
     font-size: inherit;
     font-family: $base-font;

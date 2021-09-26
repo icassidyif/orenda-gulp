@@ -1,5 +1,5 @@
 section.flatsearch.page-block
-  form
+  form.filter
     .flatsearch__header.header-flatsearch
       <svg class="wave wave-top" viewBox="0 0 320 101" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path fill-rule="evenodd" clip-rule="evenodd" d="M133.651 12.2979C40 -1.00879 0 12.2979 0 12.2979V101H320V0C320 0 227.303 25.6035 133.651 12.2979Z" fill="#BB6A9F"/>
@@ -11,7 +11,7 @@ section.flatsearch.page-block
           .header-flatsearch__title
             h2.title.title_2.title-white Пошук квартир
             .form-control.search
-              input(type='text' placeholder='пошук за кодом')
+              input(type='text' placeholder='пошук за кодом' name='code')
               +icon('search')
           .header-flatsearch__filter
             h3.header-flatsearch__label.title.title_3.title-white Кімнати
@@ -30,7 +30,7 @@ section.flatsearch.page-block
                   span 3
               .form-control.checkbox.checkbox_ring
                 label
-                  input(type='checkbox' name="rooms" value="4+")
+                  input(type='checkbox' name="rooms" value="4")
                   span 4+
               .form-control.checkbox.checkbox_ring-2
                 label
@@ -117,13 +117,13 @@ section.flatsearch.page-block
             h3.header-flatsearch__label.title.title_3.title-white Ціна
             .flatsearch__block
               .form-control.input
-                input(type='number' placeholder='Від:')
+                input(type='number' name='price' placeholder='Від:')
               .form-control.input
-                input(type='number' placeholder='До:')
+                input(type='number' name='price' placeholder='До:')
 
               .form-control.checkbox.checkbox_ring-2
                 label
-                  input(type='radio' name="currency" value="grn")
+                  input(type='radio' name="currency" value="grn" checked)
                   span ₴
               .form-control.checkbox.checkbox_ring-2
                 label
@@ -158,15 +158,15 @@ section.flatsearch.page-block
           .body-flatsearch__wrapper
             h3.body-flatsearch__title.title.title_4.title-black Поверх:
             .form-control.input.input_2
-              input(type='number' placeholder='Від')
+              input(type='number' name='floor' placeholder='Від')
             .form-control.input.input_2
-              input(type='number' placeholder='До')
+              input(type='number' name='floor' placeholder='До')
 
             h3.body-flatsearch__title.title.title_4.title-black Площа:
             .form-control.input.input_2
-              input(type='number' placeholder='Від')
+              input(type='number' name='square' placeholder='Від')
             .form-control.input.input_2
-              input(type='number' placeholder='До')
+              input(type='number' name='square' placeholder='До')
 
 
         h3.body-flatsearch__title.title.title_4.title-black Кількість спальних місць:
@@ -189,7 +189,7 @@ section.flatsearch.page-block
               span 4
           .form-control.checkbox.checkbox_square
             label
-              input(type='checkbox' name="sleep-place" value="5+")
+              input(type='checkbox' name="sleep-place" value="5")
               span 5+
           .body-flatsearch__line
         .body-flatsearch__wrapper.body-flatsearch__wrapper_2

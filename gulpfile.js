@@ -36,7 +36,6 @@ const toProd = (done) => {
 // WEBPACK CONFIG
 const webpackConfig = {
   mode: !isProd? 'development' : 'production',
-
   output: {
     filename: '[name].js',
   },
@@ -110,7 +109,7 @@ const scripts = () => {
   return src('src/static/js/main.js')
     .pipe(webpackStream(webpackConfig))
     .pipe(browserSync.stream())
-    .pipe(dest('dist/static/js/'));
+    .pipe(dest('dist/static/js/'))
 }
 
 const images = () => {
