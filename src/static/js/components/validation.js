@@ -21,11 +21,11 @@ if (document.querySelectorAll('.filter').length > 0) {
         filter.addEventListener('submit', function (e) {
             e.preventDefault();
             const valid = pristine.validate();
-            console.log('Form is valid');
+            console.log('Form is valid!');
             if(valid) {
                 formData();
             } else  {
-                console.log('Form is invalid');
+                console.log('Form is invalid!');
             }
         });
     })

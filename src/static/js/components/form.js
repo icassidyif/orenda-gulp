@@ -9,7 +9,8 @@ const pages  = document.querySelectorAll('.pagination a');
 
 const searchResultsPage = '/orenda-gulp/dist/results.html';
 
-const urlEntries =  Array.from(urlParams.entries());
+const urlEntries =  Array.from(urlParams.entries()) ;
+
 
 
 if (urlEntries.length > 0) {
