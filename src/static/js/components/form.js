@@ -7,7 +7,7 @@ let sort = document.querySelector('select#sort');
 const pages  = document.querySelectorAll('.pagination a');
 
 
-const searchResultsPage = '/results.html';
+const searchResultsPage = '/orenda-gulp/dist/results.html';
 
 const urlEntries =  Array.from(urlParams.entries());
 
