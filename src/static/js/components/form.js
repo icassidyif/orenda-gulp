@@ -7,7 +7,7 @@ let sort = document.querySelector('select#sort');
 const pages  = document.querySelectorAll('.pagination a');
 
 
-const searchResultsPage = 'orenda-gulp/dist/results.html';
+const searchResultsPage = '/results.html';
 
 const urlEntries =  Array.from(urlParams.entries());
 
@@ -127,7 +127,6 @@ function getParamsFromFilter(input) {
             urlParams.append(input.name, ParamsCollections);
             //window.location.search = decodeURI(urlParams.toString());
         }
-
     }
 }
 

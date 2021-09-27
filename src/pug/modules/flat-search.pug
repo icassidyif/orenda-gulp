@@ -117,9 +117,9 @@ section.flatsearch.page-block
             h3.header-flatsearch__label.title.title_3.title-white Ціна
             .flatsearch__block
               .form-control.input
-                input(type='number' name='price' placeholder='Від:')
+                input(type='number' name='price' step='1' placeholder='Від:')
               .form-control.input
-                input(type='number' name='price' placeholder='До:')
+                input(type='number' name='price' step='1' placeholder='До:')
 
               .form-control.checkbox.checkbox_ring-2
                 label
@@ -158,15 +158,15 @@ section.flatsearch.page-block
           .body-flatsearch__wrapper
             h3.body-flatsearch__title.title.title_4.title-black Поверх:
             .form-control.input.input_2
-              input(type='number' name='floor' placeholder='Від')
+              input(type='number' name='floor' min='0' step='1' placeholder='Від')
             .form-control.input.input_2
-              input(type='number' name='floor' placeholder='До')
+              input(type='number' name='floor' min='0' step='1' placeholder='До')
 
             h3.body-flatsearch__title.title.title_4.title-black Площа:
             .form-control.input.input_2
-              input(type='number' name='square' placeholder='Від')
+              input(type='number' name='square' min='0' step='1' placeholder='Від')
             .form-control.input.input_2
-              input(type='number' name='square' placeholder='До')
+              input(type='number' name='square' min='0' step='1' placeholder='До')
 
 
         h3.body-flatsearch__title.title.title_4.title-black Кількість спальних місць:

@@ -250,16 +250,18 @@
     font-size: toRem(25);
   }
   &.has-danger {
-    input[type='text'], input[type='number'], textarea {
-      //&::placeholder {
-      //  color: #A04B82;
-      //}
+    input[type='text'], input[type='number'], input[type='date'], textarea {
+      border: 1px solid #A04B82!important;
+      &::placeholder {
+        color: #A04B82!important;
+      }
     }
-    //.text-error {
-    //  color: white;
-    //}
+    input[type='date'] {
+      color: #A04B82!important;
+    }
   }
-  input[type='text'], input[type='number'], textarea {
+
+  input[type='text'], input[type='number'], input[type='date'], textarea {
     font-size: inherit;
     font-family: $base-font;
     color: #BB6A9F;
@@ -269,6 +271,15 @@
     border: none;
     line-height: 100%;
   }
+
+  &.date {
+    input {
+      border: none;
+      color: #a9a9a9;
+      background: hsla(0,0%,79%,.3);
+    }
+  }
+
   &.textarea {
     textarea {
       width: 100%;
