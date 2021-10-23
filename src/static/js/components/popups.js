@@ -9,20 +9,6 @@ if (modals.length > 0) {
   })
 }
 
-// if(modalsOpen.length > 0) {
-//   modalsOpen.forEach(modalOpen => {
-//     const popup = document.querySelector(modalOpen.dataset.modal);
-//     if(popup) {
-//       modalOpen.addEventListener('click', () => {
-//         popup.classList.add('show');
-//         body.classList.add('lock');
-//       })
-//       popupInit(popup);
-//     }
-//   })
-// }
-
-
 
 
 function popupInit (popup) {

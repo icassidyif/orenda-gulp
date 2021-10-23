@@ -100,14 +100,14 @@ function getSort (input) {
 
 function getParamsFromFilter(input) {
     if (urlParams.has(input.name)) {
-        const ParamsCollections = inputs.filter(inp => inp.name === input.name && ((isCheckbox(input)) ? inp.checked : inp.value !== ''))
+        const ParamsCollections = inputs.filter(inp => inp.name === input.name && ((isCheckbox(input)) ? inp.checked : true))
             .reduce((acc,inp) => {
                 acc.push(inp.value);
                 return acc;
             },[])
             .join('|');
 
-        if (!ParamsCollections) {
+        if (!ParamsCollections || ParamsCollections === '|') {
             urlParams.delete(input.name);
             //window.location.search = decodeURI(urlParams.toString());
         } else if (urlParams.get(input.name) !== ParamsCollections) {
@@ -116,7 +116,7 @@ function getParamsFromFilter(input) {
         }
 
     } else {
-        const ParamsCollections = inputs.filter(inp => inp.name === input.name && ((isCheckbox(input)) ? inp.checked : inp.value !== ''))
+        const ParamsCollections = inputs.filter(inp => inp.name === input.name && ((isCheckbox(input)) ? inp.checked : true))
             .reduce((acc,inp) => {
                 acc.push(inp.value);
                 return acc;

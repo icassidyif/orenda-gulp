@@ -32,5 +32,4 @@ export default async function sendData (form) {
         console.error('Error:', error);
         showErrorModal();
     }
-
 }

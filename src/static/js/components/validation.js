@@ -24,15 +24,48 @@ if (document.querySelectorAll('.filter').length > 0) {
             e.preventDefault();
 
             //Validate ranges
-            const numbers = filter.querySelectorAll('input[type="number"]');
-            numbers.forEach((number, idx) => {
-                if (idx % 2 !== 0) {
-                    pristine.addValidator(number, (value) => {
-                       if (value <= numbers[idx-1].value && value) {
-                           return false
-                       } else return true;
-                    }, 'error', 2, false);
-                }
+            const floors = filter.querySelectorAll('input[type="number"][name="floor"]');
+            const prices = filter.querySelectorAll('input[type="number"][name="price"]');
+            const squares = filter.querySelectorAll('input[type="number"][name="square"]');
+
+            //PRICES VALIDATE
+            prices.forEach((price, idx) => {
+                pristine.addValidator(price, value => {
+                    if (idx === 1) {
+                        if (parseInt(value) > parseInt(prices[idx - 1].value) ||
+                            prices[idx - 1].value === '' ||
+                            value === '') {
+                            return true;
+                        } else return false;
+                    }
+                    return true;
+                }, '', 2, false);
+            })
+
+            floors.forEach((floor, idx) => {
+                pristine.addValidator(floor, value => {
+                    if (idx === 1) {
+                        if (parseInt(value) >= parseInt(floors[idx - 1].value) ||
+                            floors[idx - 1].value === '' ||
+                            value === '') {
+                            return true;
+                        } else return false;
+                    }
+                    return true;
+                }, '', 3, false);
+            })
+
+            squares.forEach((square, idx) => {
+                pristine.addValidator(square, value => {
+                    if (idx === 1) {
+                        if (parseInt(value) >= parseInt(squares[idx - 1].value) ||
+                            squares[idx - 1].value === '' ||
+                            value === '') {
+                            return true;
+                        } else return false;
+                    }
+                    return true;
+                }, '', 3, false);
             })
 
             const valid = pristine.validate();
@@ -40,7 +73,7 @@ if (document.querySelectorAll('.filter').length > 0) {
                 console.log('Form is valid!');
                 formData();
             } else  {
-                console.log('Form is invalid!');
+                console.log('Form is invalid!!!!');
             }
         });
     })
@@ -76,8 +109,6 @@ if (forms.length > 0) {
             }
         })
     })
-
-
 }
 
 
