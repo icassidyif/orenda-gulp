@@ -4,19 +4,43 @@ header.header
       .header__logo
         a(href='#')
           +image('common', 'logo.svg', 'logo')
-      .header__phone.hidden-sm-down.phone
+      .header__phone.phone
         a(href='tel:+380664567377')
           +icon('phone')
           |066 825 40 16
+
       nav.header__menu.menu
-        ul
+        ul.menu__items
           li.menu__item
             a(href='#').active Головна
           li.menu__item
             a(href='#') Про нас
+            .menu__arrow
+              +icon('menu-arrow')
+            ul.sub-menu
+              li.menu__item
+                a(href='#') На сьогодні
+              li.menu__item
+                a(href='#') На завтра
+          li.menu__item
+            a(href='#Zam') Замовити показ
+            .menu__arrow
+              +icon('menu-arrow')
+            ul.sub-menu
+              li.menu__item
+                a(href='#today') На сьогодні
+              li.menu__item
+                a(href='#tomorrov') На завтра а може і на післязавтра
+              li.menu__item
+                a(href='#year') На наступний рік, якщо я не помру і все будо добре
           li.menu__item
             a(href='#') Контакти
-      .header__burger.hidden-lg-up
+          li.menu__item
+            .header__phone.phone
+              a(href='tel:+380664567377')
+                +icon('phone')
+                | 066 825 40 16
+      .header__burger
         .burger
           span
           span
