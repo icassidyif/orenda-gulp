@@ -18,7 +18,7 @@
   &__body {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 20px;
+    grid-gap: 30px;
     @include create-mq(600) {
       grid-gap: 30px;
       grid-template-columns: 1fr 1fr;
@@ -85,7 +85,7 @@
   &__title {
     display: block;
     font-size: toRem(18);
-    margin: 0 0 toEm(20,18) 0;
+    margin: 0 0 toEm(15,18) 0;
     font-weight: 700;
     text-transform: uppercase;
   }

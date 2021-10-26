@@ -55,6 +55,7 @@
   text-transform: uppercase;
   transition: right .2s ease-out;
   padding: 60px 30px 30px 30px;
+  overflow-y: auto;
   @include  create-mq(500) {
     max-width: 400px;
     padding: 60px 30px 30px 60px;
@@ -67,6 +68,7 @@
     padding: 100px 30px 30px 100px;
   }
   @include create-mq(1200) {
+    overflow: unset;
     display: block;
     position: static;
     background-color: unset;
@@ -154,8 +156,9 @@
     }
   }
 
+
   a {
-    font-weight: 500;
+    font-weight: 600;
     text-decoration: none;
     color: #000000c2;
     transition: font-weight .2s ease;
@@ -174,7 +177,7 @@
     width: 100%;
     top: 0;
     left: 0;
-    padding: toEm(10) 0 0 toEm(20);
+    padding: toEm(10) 0 0 toEm(10);
     line-height: 100%;
     @include create-mq(1200) {
       top: 100px;
@@ -185,22 +188,38 @@
       background-color: #ffffff;
       border-radius: 0 0 10px 10px;
       box-shadow: 0 7px 10px 0 rgb(68 68 68 / 10%);
-      padding: 0 0 toEm(15) 0;
+      padding: 0 0 toEm(20) 0;
     }
     .menu__item {
       padding: 0;
       @include create-mq(1200) {
         padding: 0 toEm(25);
       }
+      span {
+        width: 100%;
+        display: block;
+        font-weight: 600;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.34);
+        padding-bottom: toEm(4);
+        text-transform: uppercase;
+        cursor: default;
+        color: rgba(0, 0, 0, 0.48);
+        margin: toEm(10) 0 toEm(10) 0;
+        line-height: 130%;
+        @include create-mq(1200) {
+          margin: toEm(15) 0 0 0;
+        }
+
+      }
       a {
         display: block;
-        line-height: 150%;
+        line-height: 130%;
         white-space: normal;
-        padding: toEm(5) 0;
+        padding: toEm(5) 0 toEm(5) 0;
         text-transform: none;
+        font-weight: 500;
         @include create-mq(1200) {
-          padding: toEm(10) 0;
-          text-transform: uppercase;
+          padding: toEm(9) 0 0 0;
         }
       }
     }
