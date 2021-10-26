@@ -1,0 +1,35 @@
+.cookie {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: bottom 1s ease-out;
+  &.active {
+    bottom: 15px;
+  }
+  &__wrapper {
+    max-width: 600px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: toEm(20) 0;
+    box-shadow: 0 0 10px 0 #0000003d;
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: toRem(15);
+    line-height: 120%;
+    @include create-mq(768) {
+      font-size: toRem(18);
+    }
+    p {
+      text-align: center;
+      font-size: inherit;
+      margin: 0 0 toEm(15) 0;
+    }
+  }
+}

@@ -10,3 +10,5 @@ import './components/expand';
 import './components/validation';
 import './components/form';
 import './components/scroll';
+import './components/copyright';
+import './components/cookie';

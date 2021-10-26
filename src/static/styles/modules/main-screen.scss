@@ -1,41 +1,49 @@
 .main-screen {
-  margin: 0 0 60px+50 0;
+  margin: 0 0 70px+50 0;
+  @include create-mq(500) {
+    margin: 0 0 80px+50 0;
+  }
   @include create-mq(768) {
-    margin: 0 0 200px+70 0;
+    margin: 0 0 170px+70 0;
   }
   @include  create-mq(992) {
-    margin: 0 0 300px+100 0;
+    margin: 0 0 190px+100 0;
   }
   &__body {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-areas: 'content photo';
-    grid-column-gap: 10px;
+    grid-column-gap: 15px;
+    @include create-mq(500) {
+      grid-template-columns: 1.3fr 1fr;
+    }
   }
   &__content {
     grid-area: content;
   }
   &__title {
-    margin: 0 0 toEm(10, 27);
+    margin: 0 0 toEm(20, 26);
   }
   &__slogan {
     font-size: toRem(15);
-    line-height: 100%;
+    line-height: 120%;
     margin: 0 0 toEm(30);
+    max-width: 70%;
     @include create-mq(768) {
       font-size: toRem(20);
     }
     @include create-mq(992) {
-      font-size: toRem(30);
+      font-size: toRem(25);
     }
   }
   &__photo {
     grid-area: photo;
+    display: none;
+    @include create-mq(500) {
+      display: block;
+    }
     img {
       width: 100%;
     }
-  }
-  &__button {
-
   }
 }

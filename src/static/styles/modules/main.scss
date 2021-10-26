@@ -52,7 +52,7 @@ body {
 .page {
   position: relative;
   grid-area: page;
-  padding: 90px 0 0 0;
+  padding: 100px 0 0 0;
   @include create-mq(768) {
     padding: 160px 0 0 0;
   }

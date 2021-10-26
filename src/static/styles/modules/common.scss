@@ -10,33 +10,34 @@
 
 .title {
   font-weight: 700;
-  font-size: toRem(27);
+  font-size: toRem(26);
   color: #A04B82;
-  line-height: 100%;
+  line-height: 110%;
   @include create-mq(768) {
-    font-size: toRem(60);
+    font-size: toRem(40);
   }
   @include create-mq(992) {
-    font-size: toRem(80);
+    font-size: toRem(50);
   }
   &_2 {
-    font-size: toRem(25);
-    line-height: 100%;
+    font-size: toRem(22);
+    line-height: 110%;
+    letter-spacing: 1px;
     @include create-mq(768) {
-      font-size: toRem(50);
+      font-size: toRem(28);
     }
     @include create-mq(992) {
-      font-size: toRem(50);
+      font-size: toRem(35);
     }
   }
   &_3 {
-    font-size: toRem(20);
+    font-size: toRem(18);
     line-height: 95.9%;
     @include create-mq(768) {
-      font-size: toRem(30);
+      font-size: toRem(22);
     }
     @include create-mq(992) {
-      font-size: toRem(30);
+      font-size: toRem(28);
     }
   }
   &_4 {
@@ -64,15 +65,15 @@
   color: #ffffff;
   outline: none;
   display: inline-flex;
-  box-shadow: toEm(9) toEm(9) toEm(15) rgba(0, 0, 0, 0.15);
+  box-shadow: toEm(0) toEm(3) toEm(5) rgba(0, 0, 0, 0.25);
   font-size: toRem(15);
   line-height: 100%;
   font-weight: 700;
-  padding: toEm(8) toEm(20);
-  border-radius: toEm(16);
+  padding: toEm(10) toEm(20);
+  border-radius: toEm(23);
   transition: all .2s ease-out;
   overflow: hidden;
-  letter-spacing: inherit;
+  letter-spacing: 1px;
   white-space: nowrap;
   height: max-content;
   width: min-content;
@@ -81,7 +82,7 @@
     z-index: 5;
   }
   @include create-mq(768) {
-    font-size: toRem(25);
+    font-size: toRem(18);
   }
 
   &_no-shadow {
@@ -244,11 +245,9 @@
   position: relative;
   font-size: toEm(15);
   @include create-mq(768) {
-    font-size: toRem(24);
+    font-size: toRem(18);
   }
-  @include create-mq(992) {
-    font-size: toRem(25);
-  }
+
   &.has-danger {
     input[type='text'], input[type='number'], input[type='date'], textarea {
       border: 1px solid #A04B82!important;
@@ -290,15 +289,12 @@
       padding: toEm(8) toEm(12);
       resize: none;
       &::placeholder {
-        font-weight: 500;
+        font-weight: 400;
         font-family: $base-font;
         font-size: toRem(15);
         color: #a9a9a9;
         @include create-mq(768) {
-          font-size: toRem(24);
-        }
-        @include create-mq(992) {
-          font-size: toRem(25);
+          font-size: toRem(18);
         }
       }
       &:focus {
@@ -324,10 +320,7 @@
         font-size: toRem(15);
         color: rgba(160, 75, 130, 0.5);
         @include create-mq(768) {
-          font-size: toRem(24);
-        }
-        @include create-mq(992) {
-          font-size: toRem(25);
+          font-size: toRem(18);
         }
       }
     }
@@ -354,12 +347,14 @@
     display: inline-block;
     input {
       font-size: toRem(15);
-      max-width: toEm(165);
-      border-radius: toEm(15);
-      padding: toEm(5) toEm(7) toEm(5) toEm(30);
+      max-width: toEm(175);
+      border-radius: toEm(17);
+      padding: toEm(5) toEm(7) toEm(5) toEm(35);
       height: auto;
       @include create-mq(768) {
-        font-size: toRem(25);
+        max-width: toEm(185);
+        font-size: toRem(18);
+        padding: toEm(7) toEm(7) toEm(7) toEm(40);
       }
       &::placeholder {
         font-family: $base-font;
@@ -368,13 +363,15 @@
     }
     .icon-search {
       position: absolute;
-      left: 7px;
-      top: 8px;
+      left: 15px;
+      top: 9px;
+      width: 15px;
+      height: 15px;
       @include create-mq(768) {
-        left: 12px;
-        top: 13px;
-        width: 21px;
-        height: 21px;
+        left: 18px;
+        top: 11px;
+        width: 18px;
+        height: 18px;
       }
     }
   }
