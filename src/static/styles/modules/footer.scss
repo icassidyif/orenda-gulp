@@ -53,6 +53,16 @@
         margin: 0;
       }
     }
+    a {
+      display: inline-block;
+      color: #ffffff;
+      text-decoration: underline;
+      transition: all .2s ease-out;
+      &:hover {
+        color: #d5d5d5;
+        text-decoration: none;
+      }
+    }
     ul {
       li {
         padding: 0 0 toEm(7) toEm(10);
@@ -84,12 +94,6 @@
     font-size: inherit;
     margin: 0 0 toEm(15) 0;
     font-weight: 500;
-    transition: color .2s ease-out;
-    @include create-mq(992) {
-      &:hover {
-        color: #52D8C5;
-      }
-    }
   }
   &__social {
     display: flex;
