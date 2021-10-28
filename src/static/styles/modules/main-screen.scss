@@ -39,6 +39,7 @@
   &__photo {
     grid-area: photo;
     display: none;
+    align-self: center;
     @include create-mq(500) {
       display: block;
     }

@@ -79,9 +79,12 @@
       </section>
       <section class="flatsearch page-block">
         <form class="filter">
-          <div class="flatsearch__header header-flatsearch"><svg class="wave wave-top" viewBox="0 0 320 101" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M133.651 12.2979C40 -1.00879 0 12.2979 0 12.2979V101H320V0C320 0 227.303 25.6035 133.651 12.2979Z" fill="#BB6A9F" />
+          <div class="flatsearch__header header-flatsearch"><svg class="wave wave-top" viewBox="0 0 320 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M133.651 9.74049C40 -0.798894 0 9.74049 0 9.74049V55H320V0C320 0 227.303 20.2799 133.651 9.74049Z" fill="#BB6A9F" />
             </svg>
+            <!--<svg class="wave wave-top" viewBox="0 0 320 101" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+            <!--<path fill-rule="evenodd" clip-rule="evenodd" d="M133.651 12.2979C40 -1.00879 0 12.2979 0 12.2979V101H320V0C320 0 227.303 25.6035 133.651 12.2979Z" fill="#BB6A9F"/>-->
+            <!--</svg>-->
             <div class="header-flatsearch__content">
               <div class="container">
                 <div class="header-flatsearch__image">
@@ -96,8 +99,16 @@
                     </svg></div>
                 </div>
                 <div class="header-flatsearch__filter">
-                  <h3 class="header-flatsearch__label title title_3 title-white">Кімнати</h3>
                   <div class="flatsearch__block">
+                    <h3 class="header-flatsearch__label title title_3 title-white">Ціна</h3>
+                    <div class="form-control input"><input type="number" name="price" step="1" placeholder="Від:"></div>
+                    <div class="form-control input"><input type="number" name="price" step="1" placeholder="До:"></div>
+                    <div class="form-control checkbox checkbox_ring-2"><label><input type="radio" name="currency" value="grn" checked><span>₴</span></label></div>
+                    <div class="form-control checkbox checkbox_ring-2"><label><input type="radio" name="currency" value="dollar"><span>$</span></label></div>
+                    <div class="form-control checkbox checkbox_ring-2"><label><input type="radio" name="currency" value="euro"><span>€</span></label></div>
+                  </div>
+                  <div class="flatsearch__block">
+                    <h3 class="header-flatsearch__label title title_3 title-white">Кімнати</h3>
                     <div class="form-control checkbox checkbox_ring"><label><input type="checkbox" name="rooms" value="1"><span>1</span></label></div>
                     <div class="form-control checkbox checkbox_ring"><label><input type="checkbox" name="rooms" value="2"><span>2</span></label></div>
                     <div class="form-control checkbox checkbox_ring"><label><input type="checkbox" name="rooms" value="3"><span>3</span></label></div>
@@ -106,8 +117,9 @@
                     <div class="form-control checkbox checkbox_ring-2"><label><input type="checkbox" name="rooms" value="house"><span>Будинок</span></label></div>
                   </div>
                   <div class="flatsearch__block">
+                    <h3 class="header-flatsearch__label title title_3 title-white">Район</h3>
                     <div class="form-control select">
-                      <div class="select__trigger"><span>Район</span>
+                      <div class="select__trigger"><span>Оберіть</span>
                         <div class="arrow"></div>
                       </div>
                       <div class="custom-options">
@@ -130,18 +142,13 @@
                       </div>
                     </div>
                   </div>
-                  <h3 class="header-flatsearch__label title title_3 title-white">Ціна</h3>
-                  <div class="flatsearch__block">
-                    <div class="form-control input"><input type="number" name="price" step="1" placeholder="Від:"></div>
-                    <div class="form-control input"><input type="number" name="price" step="1" placeholder="До:"></div>
-                    <div class="form-control checkbox checkbox_ring-2"><label><input type="radio" name="currency" value="grn" checked><span>₴</span></label></div>
-                    <div class="form-control checkbox checkbox_ring-2"><label><input type="radio" name="currency" value="dollar"><span>$</span></label></div>
-                    <div class="form-control checkbox checkbox_ring-2"><label><input type="radio" name="currency" value="euro"><span>€</span></label></div>
-                  </div>
                 </div>
               </div>
-            </div><svg class="wave wave-bottom" viewBox="0 0 320 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M186.349 70.2595C280 80.7989 320 70.2595 320 70.2595V0H3.05176e-05V80C3.05176e-05 80 92.6975 59.7201 186.349 70.2595Z" fill="#BB6A9F" />
+            </div>
+            <!--<svg class="wave wave-bottom" viewBox="0 0 320 80" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+            <!--<path fill-rule="evenodd" clip-rule="evenodd" d="M186.349 70.2595C280 80.7989 320 70.2595 320 70.2595V0H3.05176e-05V80C3.05176e-05 80 92.6975 59.7201 186.349 70.2595Z" fill="#BB6A9F"/>-->
+            <!--</svg>--><svg class="wave wave-bottom" viewBox="0 0 320 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M186.349 45.2595C280 55.7989 320 45.2595 320 45.2595V0H3.05176e-05V55C3.05176e-05 55 92.6975 34.7201 186.349 45.2595Z" fill="#BB6A9F" />
             </svg>
           </div>
           <div class="flatsearch__body body-flatsearch body-expand">
@@ -721,6 +728,8 @@
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A assumenda debitis dolores labore optio praesentium vero. Dolores, hic in incidunt iusto maxime mollitia nam, necessitatibus possimus praesentium recusandae repudiandae sapiente.</p>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias expedita mollitia nulla obcaecati voluptatem! Beatae, repudiandae, voluptates.</p>
             </div>
+          </div>
+          <div class="footer__body">
             <div class="footer__widget" data-aos="zoom-in-up" data-aos-delay="100">
               <h3 class="footer__title">Студія в центрі міста</h3>
               <ul>
@@ -743,8 +752,8 @@
             <div class="footer__widget" data-aos="zoom-in-up" data-aos-delay="300">
               <h3 class="footer__title">Студія в центрі міста</h3>
               <ul>
-                <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
-                <li><a href="#">Lorem ipsum dolor sit.</a></li>
+                <li><span>Професійний сервіс<a href="#">R2R.Lviv - всі новобудови Львова</a></span></li>
+                <li><a target="_blank" href="#">Комерційна нерухомість у Львові.</a></li>
                 <li><a href="#">Lorem ipsum dolor sit amet, consectetur.</a></li>
                 <li><a href="#">Lorem ipsum dolor sit amet, consectetur.</a></li>
               </ul>

@@ -1,9 +1,13 @@
 section.flatsearch.page-block
   form.filter
     .flatsearch__header.header-flatsearch
-      <svg class="wave wave-top" viewBox="0 0 320 101" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M133.651 12.2979C40 -1.00879 0 12.2979 0 12.2979V101H320V0C320 0 227.303 25.6035 133.651 12.2979Z" fill="#BB6A9F"/>
+      <svg class="wave wave-top" viewBox="0 0 320 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M133.651 9.74049C40 -0.798894 0 9.74049 0 9.74049V55H320V0C320 0 227.303 20.2799 133.651 9.74049Z" fill="#BB6A9F"/>
       </svg>
+
+      //<svg class="wave wave-top" viewBox="0 0 320 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+      //<path fill-rule="evenodd" clip-rule="evenodd" d="M133.651 12.2979C40 -1.00879 0 12.2979 0 12.2979V101H320V0C320 0 227.303 25.6035 133.651 12.2979Z" fill="#BB6A9F"/>
+      //</svg>
       .header-flatsearch__content
         .container
           .header-flatsearch__image
@@ -14,8 +18,29 @@ section.flatsearch.page-block
               input(type='text' placeholder='пошук за кодом' name='code')
               +icon('search')
           .header-flatsearch__filter
-            h3.header-flatsearch__label.title.title_3.title-white Кімнати
+
             .flatsearch__block
+              h3.header-flatsearch__label.title.title_3.title-white Ціна
+              .form-control.input
+                input(type='number' name='price' step='1' placeholder='Від:')
+              .form-control.input
+                input(type='number' name='price' step='1' placeholder='До:')
+
+              .form-control.checkbox.checkbox_ring-2
+                label
+                  input(type='radio' name="currency" value="grn" checked)
+                  span ₴
+              .form-control.checkbox.checkbox_ring-2
+                label
+                  input(type='radio' name="currency" value="dollar")
+                  span $
+              .form-control.checkbox.checkbox_ring-2
+                label
+                  input(type='radio' name="currency" value="euro")
+                  span €
+
+            .flatsearch__block
+              h3.header-flatsearch__label.title.title_3.title-white Кімнати
               .form-control.checkbox.checkbox_ring
                 label
                   input(type='checkbox' name="rooms" value="1")
@@ -44,9 +69,10 @@ section.flatsearch.page-block
 
 
             .flatsearch__block
+              h3.header-flatsearch__label.title.title_3.title-white Район
               .form-control.select
                 .select__trigger
-                  span Район
+                  span Оберіть
                   .arrow
                 .custom-options
                   .form-control.checkbox
@@ -114,28 +140,16 @@ section.flatsearch.page-block
                       input(type='checkbox' name="district" value="pozitron")
                       span Позитрон
 
-            h3.header-flatsearch__label.title.title_3.title-white Ціна
-            .flatsearch__block
-              .form-control.input
-                input(type='number' name='price' step='1' placeholder='Від:')
-              .form-control.input
-                input(type='number' name='price' step='1' placeholder='До:')
 
-              .form-control.checkbox.checkbox_ring-2
-                label
-                  input(type='radio' name="currency" value="grn" checked)
-                  span ₴
-              .form-control.checkbox.checkbox_ring-2
-                label
-                  input(type='radio' name="currency" value="dollar")
-                  span $
-              .form-control.checkbox.checkbox_ring-2
-                label
-                  input(type='radio' name="currency" value="euro")
-                  span €
-      <svg class="wave wave-bottom" viewBox="0 0 320 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M186.349 70.2595C280 80.7989 320 70.2595 320 70.2595V0H3.05176e-05V80C3.05176e-05 80 92.6975 59.7201 186.349 70.2595Z" fill="#BB6A9F"/>
+
+
+      //<svg class="wave wave-bottom" viewBox="0 0 320 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      //<path fill-rule="evenodd" clip-rule="evenodd" d="M186.349 70.2595C280 80.7989 320 70.2595 320 70.2595V0H3.05176e-05V80C3.05176e-05 80 92.6975 59.7201 186.349 70.2595Z" fill="#BB6A9F"/>
+      //</svg>
+      <svg class="wave wave-bottom" viewBox="0 0 320 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M186.349 45.2595C280 55.7989 320 45.2595 320 45.2595V0H3.05176e-05V55C3.05176e-05 55 92.6975 34.7201 186.349 45.2595Z" fill="#BB6A9F"/>
       </svg>
+
 
     .flatsearch__body.body-flatsearch.body-expand
       .body-flatsearch__overlay
