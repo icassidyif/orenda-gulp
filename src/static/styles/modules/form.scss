@@ -68,12 +68,12 @@
       width: 100%;
       border-radius: toEm(16);
       border: 1px solid transparent;
-      @include create-mq(500) {
-        max-width: 220px;
-      }
-      @include create-mq(768) {
-        max-width: 300px;
-      }
+      //@include create-mq(500) {
+      //  max-width: 220px;
+      //}
+      //@include create-mq(768) {
+      //  max-width: 300px;
+      //}
       &::placeholder {
         font-family: $base-font;
         font-size: toRem(15);
@@ -157,6 +157,7 @@
     span {
       display: flex;
       align-items: center;
+      line-height: 120%;
       &:before {
         content: '';
         display: inline-block;
@@ -307,7 +308,7 @@
     font-size: toRem(18);
     width: max-content;
     z-index: 6;
-    margin: 0 toEm(15, 18) toEm(15, 18) 0;
+    margin: 0 toEm(18, 18) toEm(18, 18) 0;
     @include create-mq(768) {
       font-size: toRem(22);
     }
@@ -328,15 +329,15 @@
     }
 
     .select__trigger {
-      font-size: inherit;
-      border-radius: toEm(15);
+      font-size: toRem(18);
+      border-radius: toEm(15, 18);
       background-color: #ffffff;
       cursor: pointer;
       display: flex;
       align-items: center;
       width: max-content;
       height: toEm(31, 18);
-      padding: 0 toEm(20);
+      padding: 0 toEm(20, 18);
       &:before {
         content: '';
         position: absolute;

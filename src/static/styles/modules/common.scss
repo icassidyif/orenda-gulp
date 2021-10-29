@@ -9,8 +9,8 @@
 }
 
 .title {
+  font-size: toRem(28);
   font-weight: 700;
-  font-size: toRem(26);
   color: #A04B82;
   line-height: 110%;
   @include create-mq(768) {
@@ -31,7 +31,7 @@
   }
   &_3 {
     font-size: toRem(18);
-    line-height: 100%;
+    line-height: 120%;
     @include create-mq(768) {
       font-size: toRem(22);
     }
@@ -50,7 +50,7 @@
     }
   }
   &-black {
-    color: #000000;
+    color: #000000c2;
   }
   &-white {
     color: #ffffff;
@@ -58,6 +58,7 @@
 }
 
 .button {
+  background: #BB6A9F;
   border: none;
   text-decoration: none;
   cursor: pointer;
@@ -66,7 +67,7 @@
   display: inline-flex;
   font-size: toRem(15);
   line-height: 100%;
-  font-weight: 500;
+  font-weight: 600;
   padding: toEm(11, 15) toEm(30, 15);
   border-radius: toEm(23, 15);
   transition: all .2s ease-out;
@@ -79,15 +80,9 @@
   span {
     transition: inherit;
   }
-
-
-  &_no-shadow {
-    //box-shadow: none;
-  }
   &_1 {
-    background: #BB6A9F;
     border: 2px solid #BB6A9F;
-    transition: all .2s ease-out;
+    padding: toEm(11, 15) toEm(30, 15);
     @include create-mq(992) {
       &:hover {
         background: #FFFFFF;
@@ -100,39 +95,43 @@
   }
   &_2 {
     border: 2px solid #58EDA0;
-    background-color: #FFFFFF;
-    color: #58EDA0;
-    transition: all .2s ease-out;
+    background-color: #58EDA0;
+    color: #FFFFFF;
+    padding: toEm(10, 15) toEm(20, 15);
     @include create-mq(992) {
+      font-size: toRem(15);
       &:hover {
-        background-color: #58EDA0;
-        color: #FFFFFF;
+        background-color: #FFFFFF;
+        color: #58EDA0;
+        span {
+          transform: translateY(toEm(-2));
+        }
       }
     }
   }
 
   &_yellow {
-    &:before {
-      background: linear-gradient(274.71deg, #FFBD6F 0.94%, #C6FFB2 243.11%);
-    }
-    &:after {
-      background: #BB6A9F;
+    background: #FFBD6F;
+    border-color: #FFBD6F;
+    color: #FFFFFF;
+    &:hover {
+      color: #FFBD6F!important;
     }
   }
   &_red {
-    &:before {
-      background: linear-gradient(279.42deg, #FF6B6B -43.59%, #D6FFC8 267.23%);
-    }
-    &:after {
-      background: #BB6A9F;
+    background: #FF6B6B;
+    border-color: #FF6B6B;
+    color: #FFFFFF;
+    &:hover {
+      color: #FF6B6B!important;
     }
   }
   &_blue {
-    &:before {
-      background: linear-gradient(287.77deg, #7A8EF9 -63.08%, #D6FFC8 248.67%);
-    }
-    &:after {
-      background: #BB6A9F;
+    background: #7A8EF9;
+    border-color: #7A8EF9;
+    color: #FFFFFF;
+    &:hover {
+      color: #7A8EF9!important;
     }
   }
 
@@ -144,6 +143,12 @@
       width: toEm(15);
       height: toEm(15);
       z-index: 5;
+      fill: #FFFFFF;
+    }
+    &:hover {
+      svg {
+        fill: #58EDA0;
+      }
     }
   }
 }

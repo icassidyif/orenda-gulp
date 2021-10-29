@@ -1,9 +1,10 @@
 .card {
+  color: #000000c2;
   font-size: toRem(15);
   background: #FFFFFF;
   border-radius: 10px;
   overflow: hidden;
-  filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0 0 5px rgba(0,0,0,.15));
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -33,14 +34,24 @@
     }
   }
   &__title {
-    margin: 0 0 25px 0;
+    margin: 0 0 toEm(15) 0;
     flex-grow: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    h3 {
+      @include create-mq(768) {
+        font-size: toRem(22);
+      }
+    }
   }
   &__table {
     display: grid;
     grid-template-columns: min-content 1fr;
     grid-column-gap: 20px;
-    grid-row-gap: 7px;
+    grid-row-gap: 10px;
     align-items: baseline;
     margin: 0 0 25px 0;
     @include create-mq(768) {
@@ -48,42 +59,41 @@
     }
   }
   &__label {
-    font-weight: 500!important;
+    font-weight: 600!important;
     @include create-mq(768) {
-      font-size: toRem(20);
     }
   }
   &__footer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
   &__price {
     color: #A04B82;
-    font-size: toRem(25);
+    font-size: toRem(22);
     font-weight: 700!important;
+    @include create-mq(768) {
+
+    }
   }
   &__status {
-    font-size: toRem(25);
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.13);
+    padding: toEm(10, 18) toEm(15, 18);
+    border-radius: toEm(20, 18);
+    font-size: toRem(18);
     font-weight: 700!important;
+    background-color: #FFFFFF;
     &_free {
-      background: -webkit-linear-gradient(278.54deg, #52D8C5 11.1%, #C6FFB2 160.58%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: #58eda0;
     }
     &_rent {
-      background: -webkit-linear-gradient(282.38deg, #FF6B6B -12.42%, #C6FFB2 225.43%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: #FF6B6B;
     }
     &_booked {
-      background: -webkit-linear-gradient(275.4deg, #7A8EF9 38.76%, #C6FFB2 175.88%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: #7A8EF9;
     }
     &_released {
-      background: -webkit-linear-gradient(273.5deg, #FFBD6F 22.56%, #D6FFC8 209.27%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: #FFBD6F;
     }
   }
 }
