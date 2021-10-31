@@ -22,7 +22,6 @@ if (document.querySelectorAll('.filter').length > 0) {
 
         filter.addEventListener('submit', function (e) {
             e.preventDefault();
-
             //Validate ranges
             const floors = filter.querySelectorAll('input[type="number"][name="floor"]');
             const prices = filter.querySelectorAll('input[type="number"][name="price"]');
@@ -88,13 +87,28 @@ if (forms.length > 0) {
         form.addEventListener('submit', async function (e) {
             e.preventDefault();
             const phone = form.querySelector('input[name="phone"]');
+            const date = form.querySelector('input[type="date"]');
             const regPhone = /^[0-9()-.\s]+$/;
 
+            //validate phone
             pristine.addValidator(phone, (value) => {
                 if (!value.match(regPhone)) {
                     return false;
                 } else return true;
             }, 'error', 2, false);
+
+            //validate date
+            if (date) {
+                pristine.addValidator(date, value => {
+                    const inputDate = new Date(value);
+                    const today = new Date();
+                    if (inputDate >= today) {
+                        return true;
+                    }
+                    else return false;
+                }, 'error', 3 , false);
+            }
+
 
             const valid = pristine.validate();
             if(valid) {
