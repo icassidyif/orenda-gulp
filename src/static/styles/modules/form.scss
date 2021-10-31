@@ -33,8 +33,11 @@
   &.date {
     input {
       border: none;
-      color: #a9a9a9;
-      background: hsla(0,0%,79%,.3);
+      color: rgba(0, 0, 0, 0.3);
+      &::placeholder {
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.3);
+      }
     }
   }
 
@@ -51,7 +54,7 @@
         font-weight: 500;
         font-family: $base-font;
         font-size: toRem(15);
-        color: #a9a9a9;
+        color: rgba(0, 0, 0, 0.3);
         @include create-mq(768) {
           font-size: toRem(18);
         }

@@ -1,4 +1,28 @@
+.about {
+  .contacts {
+    &__title {
+      border-bottom: 1px solid #0000002e;
+      padding: 0 0 15px 0;
+      margin:  0 0 15px 0;
+      @include create-mq(768) {
+        padding: 0 0 30px 0;
+        margin:  0 0 30px 0;
+      }
+    }
+  }
+}
 .question {
+  font-size: toRem(15);
+  line-height: 120%;
+  margin: 0 0 15px 0;
+  @include create-mq(768) {
+    margin: 0 0 30px 0;
+    font-size: toRem(18);
+  }
+  @include create-mq(992) {
+    margin: 0 0 50px 0;
+    //font-size: toRem(22);
+  }
   &__block {
     position: relative;
   }
@@ -10,17 +34,7 @@
     height: 100%;
   }
   &__title {
-    margin: 0 0 toEm(10,25) 0;
-  }
-  &__text {
-    font-size: toRem(15);
-    line-height: 120%;
-    @include create-mq(768) {
-      font-size: toRem(20);
-    }
-    @include create-mq(992) {
-      font-size: toRem(25);
-    }
+    margin: 0 0 toEm(10,22) 0;
   }
 
   &_wave {
@@ -34,10 +48,10 @@
       &__block {
         padding: 40px 0;
         @include create-mq(768) {
-          padding: 110px 0;
+          padding: 60px 0;
         }
         @include create-mq(992) {
-          padding: 160px 0;
+          padding: 80px 0;
         }
       }
     }

@@ -428,9 +428,12 @@
     grid-template-columns: 1fr;
     background-color: #BB6A9F;
     grid-row-gap: 15px;
+    border-bottom: 1px solid white;
+    padding: 0 0 20px 0;
     @include create-mq(550) {
       padding: toEm(15) toEm(15) toEm(20) toEm(0);
       border-radius: 0 10px 10px 0;
+      border: none;
     }
     @include create-mq(768) {
       padding: toEm(20) toEm(30) toEm(30) toEm(0);
@@ -472,6 +475,7 @@
     justify-content: left;
   }
   &__button {
+    font-size: toRem(13);
     width: min-content;
     justify-content: left;
     display: inline-flex;

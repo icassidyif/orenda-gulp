@@ -43,10 +43,10 @@
     font-size: toRem(18);
     line-height: 100%;
     @include create-mq(768) {
-      font-size: toRem(24);
+      font-size: toRem(22);
     }
     @include create-mq(992) {
-      font-size: toRem(25);
+      font-size: toRem(24);
     }
   }
   &-black {
@@ -145,9 +145,11 @@
       z-index: 5;
       fill: #FFFFFF;
     }
-    &:hover {
-      svg {
-        fill: #58EDA0;
+    @include create-mq(992) {
+      &:hover {
+        svg {
+          fill: #58EDA0;
+        }
       }
     }
   }

@@ -1,12 +1,12 @@
 .team {
   &__block {
     position: relative;
-    padding: 50px 0 50px 0;
+    padding: 40px 0;
     @include create-mq(768) {
-      padding: 100px 0 85px 0;
+      padding: 60px 0;
     }
     @include create-mq(992) {
-      padding: 150px 0 150px 0;
+      padding: 80px 0;
     }
   }
   &__wave {
@@ -20,7 +20,12 @@
     display: grid;
     .swiper-pagination {
       @include create-mq(768) {
-        bottom: 0!important;
+        bottom: 20px!important;
+      }
+    }
+    .swiper {
+      @include create-mq(768) {
+        padding: 40px 0 100px 0;
       }
     }
   }
