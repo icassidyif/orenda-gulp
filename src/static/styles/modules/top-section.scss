@@ -33,13 +33,12 @@
   }
   &__title {
     margin: 0 0 toEm(15, 27);
-    width: min-content;
+    @include create-mq(768) {
+      width: 80%;
+    }
   }
   &__actions {
     display: flex;
-  }
-  &__sort {
-
   }
   &__button {
     border: 2px solid transparent;

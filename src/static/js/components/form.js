@@ -25,7 +25,6 @@ if (urlEntries.length > 0) {
 
 if (sort) {
     //INPUTS listeners
-    getSort(sort);
     sort.addEventListener('change', (e) => {
         getSort(e.target);
     })
@@ -38,6 +37,7 @@ if (filter) {
         inputs.forEach(input => {
             if ((isCheckbox(input) && input.checked) || (!isCheckbox(input) && input.value !== '')) {
                 getParamsFromFilter(input);
+
             }
             input.addEventListener('change', (e) => {
                 const input = e.target;
@@ -93,12 +93,19 @@ function getSort (input) {
     }
     if (input.value !== urlParams.get(input.name)) {
         urlParams.set(input.name, input.value);
-        window.location.search = decodeURI(urlParams.toString());
+       window.location.search = decodeURI(urlParams.toString());
     }
 }
 
 
 function getParamsFromFilter(input) {
+    if (sort) {
+        urlParams.set(sort.name, sort.value);
+    } else {
+        urlParams.set('sort', 'popular');
+    }
+
+
     if (urlParams.has(input.name)) {
         const ParamsCollections = inputs.filter(inp => inp.name === input.name && ((isCheckbox(input)) ? inp.checked : true))
             .reduce((acc,inp) => {
@@ -109,6 +116,7 @@ function getParamsFromFilter(input) {
 
         if (!ParamsCollections || ParamsCollections === '|') {
             urlParams.delete(input.name);
+
             //window.location.search = decodeURI(urlParams.toString());
         } else if (urlParams.get(input.name) !== ParamsCollections) {
             urlParams.set(input.name, ParamsCollections);
@@ -131,6 +139,7 @@ function getParamsFromFilter(input) {
 }
 
 function formData()  {
+
     window.location.replace(`${searchResultsPage}?${decodeURI(urlParams.toString())}`);
 }
 

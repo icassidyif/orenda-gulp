@@ -85,6 +85,7 @@ if (forms.length > 0) {
     forms.forEach(form => {
         const pristine = new Pristine(form, defaultConfig);
         form.addEventListener('submit', async function (e) {
+            //-- edit-start
             e.preventDefault();
             const phone = form.querySelector('input[name="phone"]');
             const date = form.querySelector('input[type="date"]');
@@ -108,7 +109,7 @@ if (forms.length > 0) {
                     else return false;
                 }, 'error', 3 , false);
             }
-
+            //-- edit-end
 
             const valid = pristine.validate();
             if(valid) {
