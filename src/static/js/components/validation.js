@@ -1,6 +1,6 @@
 import Pristine from "pristinejs/dist/pristine";
 import formData from './form';
-import sendData from "./ajax";
+//import sendData from "./ajax";
 
 let defaultConfig = {
     // class of the parent element where the error/success class is added
@@ -31,7 +31,7 @@ if (document.querySelectorAll('.filter').length > 0) {
             prices.forEach((price, idx) => {
                 pristine.addValidator(price, value => {
                     if (idx === 1) {
-                        if (parseInt(value) > parseInt(prices[idx - 1].value) ||
+                        if (parseInt(value) >= parseInt(prices[idx - 1].value) ||
                             prices[idx - 1].value === '' ||
                             value === '') {
                             return true;
@@ -103,10 +103,7 @@ if (forms.length > 0) {
                 pristine.addValidator(date, value => {
                     const inputDate = new Date(value);
                     const today = new Date();
-                    if (inputDate >= today) {
-                        return true;
-                    }
-                    else return false;
+                    return inputDate >= today;
                 }, 'error', 3 , false);
             }
             //-- edit-end

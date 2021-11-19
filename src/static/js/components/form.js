@@ -1,16 +1,18 @@
 const filter = document.querySelector('form.filter');
+let inputs;
+if (filter) {
+    inputs  = Array.from(filter.querySelectorAll('input'));
+}
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-let inputs  = Array.from(filter.querySelectorAll('input'));
+
 let sort = document.querySelector('select#sort');
 
 const pages  = document.querySelectorAll('.pagination a');
 
-
 const searchResultsPage = '/results.html';
 
 const urlEntries =  Array.from(urlParams.entries());
-
 
 if (urlEntries.length > 0) {
     urlEntries.forEach(entry => {
@@ -36,14 +38,17 @@ if (filter) {
     if(inputs.length > 0) {
         inputs.forEach(input => {
             if ((isCheckbox(input) && input.checked) || (!isCheckbox(input) && input.value !== '')) {
-                getParamsFromFilter(input);
-
+                getParamsFromFilter(input, true);
             }
+
             input.addEventListener('change', (e) => {
                 const input = e.target;
                 getParamsFromFilter(input);
             })
         })
+     }
+    if ('?' + urlParams.toString() !== window.location.search) {
+        window.history.pushState('', '', '?' + decodeURI(urlParams.toString()));
     }
 }
 
@@ -58,6 +63,7 @@ if (pages.length > 0) {
         }
     })
 }
+
 
 function setItem (entry) {
     const paramName = entry[0];
@@ -98,13 +104,10 @@ function getSort (input) {
 }
 
 
-function getParamsFromFilter(input) {
+function getParamsFromFilter(input, initial = false) {
     if (sort) {
         urlParams.set(sort.name, sort.value);
-    } else {
-        urlParams.set('sort', 'popular');
     }
-
 
     if (urlParams.has(input.name)) {
         const ParamsCollections = inputs.filter(inp => inp.name === input.name && ((isCheckbox(input)) ? inp.checked : true))
@@ -117,10 +120,8 @@ function getParamsFromFilter(input) {
         if (!ParamsCollections || ParamsCollections === '|') {
             urlParams.delete(input.name);
 
-            //window.location.search = decodeURI(urlParams.toString());
         } else if (urlParams.get(input.name) !== ParamsCollections) {
             urlParams.set(input.name, ParamsCollections);
-            //window.location.search = decodeURI(urlParams.toString());
         }
 
     } else {
@@ -133,15 +134,12 @@ function getParamsFromFilter(input) {
 
         if (urlParams.get(input.name) !== ParamsCollections ) {
             urlParams.append(input.name, ParamsCollections);
-            //window.location.search = decodeURI(urlParams.toString());
         }
     }
 }
 
 function formData()  {
-
     window.location.replace(`${searchResultsPage}?${decodeURI(urlParams.toString())}`);
 }
-
 
 export default formData;
