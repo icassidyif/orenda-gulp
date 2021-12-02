@@ -65,143 +65,26 @@
       </div>
     </header>
     <main class="page">
-      <section class="main-screen">
+      <section class="main-screen page-block">
         <div class="container">
           <div class="main-screen__body">
             <div class="main-screen__content" data-aos="zoom-in-left">
               <h1 class="title title_1 main-screen__title"> Довгострокова оренда квартири в Івано-Франківську</h1>
               <p class="main-screen__slogan">Знайдемо житло, в якому відчуєте себе як вдома</p>
-              <div class="main-screen__button"><button class="button button_1 modal-open" data-modal="#request"><span>Залишити заявку</span></button></div>
+              <div class="main-screen__button"><button class="button button_1 button_icon find-flat__button modal-open" data-modal="#filter"><span>Пошук квартир</span><svg class="icon icon-filter ">
+                    <use xlink:href="static/images/sprite/symbol/sprite.svg#filter"></use>
+                  </svg></button></div>
             </div>
             <div class="main-screen__photo" data-aos="zoom-in-right"><img class=" " src="static/images/common/main-screen-photo.svg" alt="main-screen-photo.svg" /></div>
           </div>
         </div>
       </section>
-      <section class="flatsearch page-block">
-        <form class="filter">
-          <div class="flatsearch__header header-flatsearch"><svg class="wave wave-top" viewBox="0 0 320 55" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M133.651 9.74049C40 -0.798894 0 9.74049 0 9.74049V55H320V0C320 0 227.303 20.2799 133.651 9.74049Z" fill="#BB6A9F" />
-            </svg>
-            <div class="header-flatsearch__content">
-              <div class="container">
-                <div class="header-flatsearch__image">
-                  <picture>
-                    <source srcset="static/images/common/snail.webp" type="image/webp"><img class=" " src="static/images/common/snail.png" alt="snail.png" />
-                  </picture>
-                </div>
-                <div class="header-flatsearch__title">
-                  <h2 class="title title_2 title-white">Пошук квартир</h2>
-                  <div class="form-control search"><input type="text" placeholder="пошук за кодом" name="code"><svg class="icon icon-search ">
-                      <use xlink:href="static/images/sprite/symbol/sprite.svg#search"></use>
-                    </svg></div>
-                </div>
-                <div class="header-flatsearch__filter">
-                  <div class="flatsearch__block">
-                    <h3 class="header-flatsearch__label title title_3 title-white">Ціна</h3>
-                    <div class="form-control input"><input type="number" name="price" step="1" placeholder="Від:"></div>
-                    <div class="form-control input"><input type="number" name="price" step="1" placeholder="До:"></div>
-                    <div class="form-control checkbox checkbox_ring-2"><label><input type="radio" name="currency" value="grn" checked><span>₴</span></label></div>
-                    <div class="form-control checkbox checkbox_ring-2"><label><input type="radio" name="currency" value="dollar"><span>$</span></label></div>
-                    <div class="form-control checkbox checkbox_ring-2"><label><input type="radio" name="currency" value="euro"><span>€</span></label></div><!-- -- edit-end-->
-                  </div>
-                  <div class="flatsearch__block">
-                    <h3 class="header-flatsearch__label title title_3 title-white">Кімнати</h3>
-                    <div class="form-control checkbox checkbox_ring"><label><input type="checkbox" name="rooms" value="1"><span>1</span></label></div>
-                    <div class="form-control checkbox checkbox_ring"><label><input type="checkbox" name="rooms" value="2"><span>2</span></label></div>
-                    <div class="form-control checkbox checkbox_ring"><label><input type="checkbox" name="rooms" value="3"><span>3</span></label></div>
-                    <div class="form-control checkbox checkbox_ring"><label><input type="checkbox" name="rooms" value="4"><span>4+</span></label></div>
-                    <div class="form-control checkbox checkbox_ring-2"><label><input type="checkbox" name="rooms" value="studio"><span>Студія</span></label></div>
-                    <div class="form-control checkbox checkbox_ring-2"><label><input type="checkbox" name="rooms" value="house"><span>Будинок</span></label></div>
-                  </div>
-                  <div class="flatsearch__block">
-                    <h3 class="header-flatsearch__label title title_3 title-white">Район</h3>
-                    <div class="form-control select">
-                      <div class="select__trigger"><span>Оберіть</span>
-                        <div class="arrow"></div>
-                      </div>
-                      <div class="custom-options">
-                        <div class="form-control checkbox"><label><input type="checkbox" name="district" value="bam"><span>Бам</span></label></div>
-                        <div class="form-control checkbox"><label><input type="checkbox" name="district" value="centr"><span>Центр</span></label></div>
-                        <div class="form-control checkbox"><label><input type="checkbox" name="district" value="kryhivci"><span>Крихівці</span></label></div>
-                        <div class="form-control checkbox"><label><input type="checkbox" name="district" value="pozitron"><span>Позитрон</span></label></div>
-                        <div class="form-control checkbox"><label><input type="checkbox" name="district" value="nez-tys"><span>Незалежності-Тисминецька</span></label></div>
-                        <div class="form-control checkbox"><label><input type="checkbox" name="district" value="centr"><span>Центр</span></label></div>
-                        <div class="form-control checkbox"><label><input type="checkbox" name="district" value="kryhivci"><span>Крихівці</span></label></div>
-                        <div class="form-control checkbox"><label><input type="checkbox" name="district" value="pozitron"><span>Позитрон</span></label></div>
-                        <div class="form-control checkbox"><label><input type="checkbox" name="district" value="bam"><span>Бам</span></label></div>
-                        <div class="form-control checkbox"><label><input type="checkbox" name="district" value="centr"><span>Центр</span></label></div>
-                        <div class="form-control checkbox"><label><input type="checkbox" name="district" value="kryhivci"><span>Крихівці</span></label></div>
-                        <div class="form-control checkbox"><label><input type="checkbox" name="district" value="pozitron"><span>Позитрон</span></label></div>
-                        <div class="form-control checkbox"><label><input type="checkbox" name="district" value="bam"><span>Бам</span></label></div>
-                        <div class="form-control checkbox"><label><input type="checkbox" name="district" value="centr"><span>Центр</span></label></div>
-                        <div class="form-control checkbox"><label><input type="checkbox" name="district" value="kryhivci"><span>Крихівці</span></label></div>
-                        <div class="form-control checkbox"><label><input type="checkbox" name="district" value="pozitron"><span>Позитрон</span></label></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!--  Видалений блок з цінами, бо перенесений наверх-->
-            <!--  -- edit-start--><svg class="wave wave-bottom" viewBox="0 0 320 55" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M186.349 45.2595C280 55.7989 320 45.2595 320 45.2595V0H3.05176e-05V55C3.05176e-05 55 92.6975 34.7201 186.349 45.2595Z" fill="#BB6A9F" />
-            </svg>
-          </div><!--  -- edit-end-->
-          <div class="flatsearch__body body-flatsearch body-expand">
-            <div class="body-flatsearch__overlay">
-              <div class="body-flatsearch__icon expand-icon"><svg class="icon icon-expand-arrow ">
-                  <use xlink:href="static/images/sprite/symbol/sprite.svg#expand-arrow"></use>
-                </svg></div>
-              <div class="body-flatsearch__button"><button class="button button_2 button_no-shadow"><span>Пошук</span></button></div>
-            </div>
-            <div class="container">
-              <div class="flatsearch__block flatsearch__block_between body-flatsearch__block">
-                <div class="form-control checkbox"><label><input type="checkbox" name="main-options" value="individual-heating"><span>Інд. опалення</span></label></div>
-                <div class="form-control checkbox"><label><input type="checkbox" name="main-options" value="new-building"><span>Новобудова</span></label></div>
-              </div>
-              <div class="flatsearch__block body-flatsearch__block">
-                <div class="body-flatsearch__wrapper">
-                  <h3 class="body-flatsearch__title title title_4 title-black">Поверх:</h3>
-                  <div class="form-control input input_2"><input type="number" name="floor" min="0" step="1" placeholder="Від"></div>
-                  <div class="form-control input input_2"><input type="number" name="floor" min="0" step="1" placeholder="До"></div>
-                  <h3 class="body-flatsearch__title title title_4 title-black">Площа:</h3>
-                  <div class="form-control input input_2"><input type="number" name="square" min="0" step="1" placeholder="Від"></div>
-                  <div class="form-control input input_2"><input type="number" name="square" min="0" step="1" placeholder="До"></div>
-                </div>
-              </div>
-              <h3 class="body-flatsearch__title title title_4 title-black">Кількість спальних місць:</h3>
-              <div class="flatsearch__block body-flatsearch__block">
-                <div class="form-control checkbox checkbox_square"><label><input type="checkbox" name="sleep-place" value="1"><span>1</span></label></div>
-                <div class="form-control checkbox checkbox_square"><label><input type="checkbox" name="sleep-place" value="2"><span>2</span></label></div>
-                <div class="form-control checkbox checkbox_square"><label><input type="checkbox" name="sleep-place" value="3"><span>3</span></label></div>
-                <div class="form-control checkbox checkbox_square"><label><input type="checkbox" name="sleep-place" value="4"><span>4</span></label></div>
-                <div class="form-control checkbox checkbox_square"><label><input type="checkbox" name="sleep-place" value="5"><span>5+</span></label></div>
-                <div class="body-flatsearch__line"></div>
-              </div>
-              <div class="body-flatsearch__wrapper body-flatsearch__wrapper_2">
-                <div class="form-control checkbox"><label><input type="checkbox" name="options" value="parking"><span>Паркінг</span></label></div>
-                <div class="form-control checkbox"><label><input type="checkbox" name="options" value="garas"><span>Гараж</span></label></div>
-                <div class="form-control checkbox"><label><input type="checkbox" name="options" value="kladovka"><span>Кладовка</span></label></div>
-                <div class="form-control checkbox"><label><input type="checkbox" name="options" value="vidk-balkon"><span>Відкритий балкон</span></label></div>
-                <div class="form-control checkbox"><label><input type="checkbox" name="options" value="pidigriv-pidlogy"><span>Підігрів підлоги</span></label></div>
-                <div class="form-control checkbox"><label><input type="checkbox" name="options" value="lift"><span>Ліфт</span></label></div>
-                <div class="form-control checkbox"><label><input type="checkbox" name="options" value="pralna-mashyna"><span>Пральна машина</span></label></div>
-                <div class="form-control checkbox"><label><input type="checkbox" name="options" value="duhovka"><span>Духовка</span></label></div>
-                <div class="form-control checkbox"><label><input type="checkbox" name="options" value="vanna"><span>Ванна</span></label></div>
-                <div class="form-control checkbox"><label><input type="checkbox" name="options" value="dvospalne-lizko"><span>Двоспальне ліжко</span></label></div>
-              </div>
-            </div>
-          </div>
-        </form>
-      </section>
+      <!--include ../modules/flat-search-->
       <section class="interesting slider-block page-block">
         <div class="container">
           <div class="slider-block__header">
             <h2 class="slider-block__title title title_2" data-aos="zoom-in-right">Що в нас є цікавого?</h2>
-            <div class="slider-block__icon" data-aos="zoom-in-left">
-              <picture>
-                <source srcset="static/images/common/interesting-icon.svg" type="image/webp"><img class=" " src="static/images/common/interesting-icon.svg" alt="interesting-icon.svg" />
-              </picture>
-            </div>
+            <div class="slider-block__icon" data-aos="zoom-in-left"><img class=" " src="static/images/common/interesting-icon.svg" alt="interesting-icon.svg" /></div>
           </div>
         </div>
         <div class="slider-block__body">

@@ -90,6 +90,9 @@
         span {
           transform: translateY(toEm(-2));
         }
+        svg {
+          fill: #BB6A9F;
+        }
       }
     }
   }
@@ -108,6 +111,18 @@
         }
       }
     }
+  }
+  &_green {
+    background: #58EDA0;
+    border-color: #58EDA0;
+    color: #FFFFFF;
+    @include create-mq(992) {
+      &:hover {
+        background-color: #FFFFFF;
+        color: #58EDA0;
+      }
+    }
+
   }
 
   &_yellow {
@@ -134,7 +149,17 @@
       color: #7A8EF9!important;
     }
   }
-
+  &_icon {
+    span {
+      margin: 0 toEm(7) 0 0;
+    }
+    svg {
+      width: toEm(15);
+      height: toEm(15);
+      z-index: 5;
+      fill: #FFFFFF;
+    }
+  }
   &_video {
     span {
       margin: 0 toEm(7) 0 0;

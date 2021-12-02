@@ -1,12 +1,13 @@
-section.main-screen
+section.main-screen.page-block
   .container
     .main-screen__body
       div(data-aos="zoom-in-left").main-screen__content
         h1.title.title_1.main-screen__title  Довгострокова оренда квартири в Івано-Франківську
         p.main-screen__slogan Знайдемо житло, в якому відчуєте себе як вдома
         .main-screen__button
-          button(data-modal='#request').button.button_1.modal-open
-            span Залишити заявку
+          button(data-modal='#filter').button.button_1.button_icon.find-flat__button.modal-open
+            span Пошук квартир
+            +icon('filter')
       div(data-aos="zoom-in-right").main-screen__photo
         +image('common', 'main-screen-photo.svg')
 

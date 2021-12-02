@@ -47,9 +47,9 @@ if (filter) {
             })
         })
      }
-    if ('?' + urlParams.toString() !== window.location.search) {
-        window.history.pushState('', '', '?' + decodeURI(urlParams.toString()));
-    }
+    // if ('?' + urlParams.toString() !== window.location.search) {
+    //     window.history.pushState('', '', '?' + decodeURI(urlParams.toString()));
+    // }
 }
 
 if (pages.length > 0) {
